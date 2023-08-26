@@ -66,40 +66,40 @@ const UserTableList = () => {
               <TableHead>
                 <TableRow>
                   <TableCell>Id</TableCell>
-                  <TableCell> name</TableCell>
-                  <TableCell>User Name</TableCell>
-                  <TableCell>E-mail</TableCell>
-                  <TableCell>Phone</TableCell>
-                  <TableCell>Website</TableCell>
-                  <TableCell>Address</TableCell>
-                  <TableCell>Company</TableCell>
+                  <TableCell>Name</TableCell>
+                  <TableCell align="center">User Name</TableCell>
+                  <TableCell align="center">E-mail</TableCell>
+                  <TableCell align="center">Phone</TableCell>
+                  <TableCell align="center">Website</TableCell>
+                  <TableCell align="center">Address</TableCell>
+                  <TableCell align="center">Company</TableCell>
                 </TableRow>
               </TableHead>
             </Table>
             <Table>
-            <TableBody>
-              {data.data.map((user) => (
-                <TableRow
-                  key={user.id}
-                  sx={{
-                    "&:last-child td, &:last-child th": { border: 0 },
-                  }}
-                >
-                  <TableCell component="th" scope="row">
-                    {user.id}
-                  </TableCell>
-                  <TableCell align="right">{user.name}</TableCell>
-                  <TableCell align="right">{user.username}</TableCell>
-                  <TableCell align="right">{user.email}</TableCell>
-                  <TableCell>{user.phone}</TableCell>
-                  <TableCell align="right">{user.website}</TableCell>
-                  <TableCell>
-                    {user.address.street},{user.address.suite}
-                  </TableCell>
-                  <TableCell align="center">{user.company.name},</TableCell>
-                </TableRow>
-              ))}
-            </TableBody>
+              <TableBody>
+                {data.data.map((user) => (
+                  <TableRow
+                    key={user.id}
+                    sx={{
+                      "&:last-child td, &:last-child th": { border: 0 },
+                    }}
+                  >
+                    <TableCell component="th" scope="row">
+                      {user.id}
+                    </TableCell>
+                    <TableCell align="center">{user.name}</TableCell>
+                    <TableCell align="right">{user.username}</TableCell>
+                    <TableCell align="right">{user.email}</TableCell>
+                    <TableCell align="center">{user.phone}</TableCell>
+                    <TableCell align="right">{user.website}</TableCell>
+                    <TableCell align="center">
+                      {user.address.street},{user.address.suite}
+                    </TableCell>
+                    <TableCell align="center">{user.company.name},</TableCell>
+                  </TableRow>
+                ))}
+              </TableBody>
             </Table>
           </TableContainer>
         ) : null}

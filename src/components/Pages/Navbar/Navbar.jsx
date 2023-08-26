@@ -3,14 +3,10 @@ import {
   Box,
   Toolbar,
   IconButton,
-  MenuItem,
   Menu,
   Avatar,
   ListItem,
-  ListItemButton,
-  ListItemText,
   Link,
-  List,
 } from "@mui/material";
 
 import MenuIcon from "@mui/icons-material/Menu";
@@ -21,16 +17,19 @@ import LightModeIcon from "@mui/icons-material/LightMode";
 
 import { useState } from "react";
 import ReactLogo from "../../../../Images/logo192.png";
-import myList from "../../Data/NavbarData";
 import { useNavigate } from "react-router-dom";
 
-import {PropTypes} from 'prop-types'
-import { Search, SearchIconWrapper, StyledAppBar, StyledInputBase } from "../../Style/AccessThemes";
-
-
+import { PropTypes } from "prop-types";
+import {
+  Search,
+  SearchIconWrapper,
+  StyledAppBar,
+  StyledInputBase,
+} from "../../Style/AccessThemes";
+import NavbarData from "./Data/NavbarData";
+import NavbarMenu from "./Data/NavbarMenu";
 
 const Navbar = ({ mode, setMyMode }) => {
-  
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = useState(null);
 
   const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
@@ -64,28 +63,12 @@ const Navbar = ({ mode, setMyMode }) => {
       open={isMobileMenuOpen}
       onClose={handleMobileMenuClose}
     >
-      <MenuItem>
-        {myList.map((item) => {
-          return (
-            <List key={item.text} >
-              <ListItem>
-                <ListItemButton
-                  onClick={() => {
-                    navigate(item.path);
-                  }}
-                >
-                  <ListItemText primary={item.text} />
-                </ListItemButton>
-              </ListItem>
-            </List>
-          );
-        })}
-      </MenuItem>
+      <NavbarMenu />
     </Menu>
   );
 
   return (
-    <Box >
+    <Box>
       <StyledAppBar elevation={0}>
         <Toolbar>
           <IconButton
@@ -115,21 +98,7 @@ const Navbar = ({ mode, setMyMode }) => {
               display: { xs: "none", md: "flex" },
             }}
           >
-            {myList.map((item) => {
-              return (
-                <List key={item.text} sx={{p:'0'}}>
-                  <ListItem>
-                    <ListItemButton
-                      onClick={() => {
-                        navigate(item.path);
-                      }}
-                    >
-                      <ListItemText primary={item.text} />
-                    </ListItemButton>
-                  </ListItem>
-                </List>
-              );
-            })}
+            <NavbarData />
           </Box>
           <Box sx={{ display: "flex" }}>
             <ListItem>
@@ -183,9 +152,9 @@ const Navbar = ({ mode, setMyMode }) => {
   );
 };
 
-Navbar.propTypes={
+Navbar.propTypes = {
   mode: PropTypes.any.isRequired,
-  setMyMode:PropTypes.any.isRequired
-}
+  setMyMode: PropTypes.any.isRequired,
+};
 
 export default Navbar;

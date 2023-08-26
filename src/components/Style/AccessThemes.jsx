@@ -1,7 +1,6 @@
-import { AppBar, InputBase, alpha, styled,IconButton } from "@mui/material";
+import { AppBar, InputBase, alpha, styled, IconButton } from "@mui/material";
 import { createTheme } from "@mui/material/styles";
 import { blue } from "@mui/material/colors";
-
 
 export const Search = styled("div")(({ theme }) => ({
   position: "relative",
@@ -61,7 +60,7 @@ export const ButtonTheme = createTheme({
 });
 
 export const ExpandMore = styled((props) => {
-  const {expand ,  ...other } = props;
+  const { expand, ...other } = props;
   return <IconButton {...other} />;
 })(({ theme, expand }) => ({
   transform: !expand ? "rotate(0deg)" : "rotate(180deg)",
