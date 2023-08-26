@@ -1,11 +1,4 @@
-
-
-
-
-
-
-
- const getDesignTokens = (mode) => ({
+const getDesignTokens = (mode) => ({
   palette: {
     mode,
     ...(mode === "light"
@@ -21,15 +14,13 @@
       : {
           // palette values for dark mode
           bgColors: {
-            main: "#263238"
+            main: "rgb(35 39 47)",
           },
           Color: {
-            main: "#eee"
-          }
+            main: "#eee",
+          },
         }),
   },
 });
 
 export default getDesignTokens;
-
-
