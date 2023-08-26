@@ -60,7 +60,7 @@ const UserTableList = () => {
           <TableContainer component={Paper} sx={{ maxHeight: "500px" }}>
             <Table
               aria-label="simple table"
-              sx={{ minWidth: 1050 }}
+              sx={{ minWidth: 1000 }}
               stickyHeader
             >
               <TableHead>
@@ -69,9 +69,9 @@ const UserTableList = () => {
                   <TableCell>Name</TableCell>
                   <TableCell align="center">User Name</TableCell>
                   <TableCell align="center">E-mail</TableCell>
-                  <TableCell align="center">Phone</TableCell>
-                  <TableCell align="center">Website</TableCell>
-                  <TableCell align="center">Address</TableCell>
+                  <TableCell align="right">Phone</TableCell>
+                  <TableCell align="right">Website</TableCell>
+                  <TableCell align="right">Address</TableCell>
                   <TableCell align="center">Company</TableCell>
                 </TableRow>
               </TableHead>
@@ -89,10 +89,10 @@ const UserTableList = () => {
                       {user.id}
                     </TableCell>
                     <TableCell align="center">{user.name}</TableCell>
-                    <TableCell align="right">{user.username}</TableCell>
-                    <TableCell align="right">{user.email}</TableCell>
+                    <TableCell align="center">{user.username}</TableCell>
+                    <TableCell align="center">{user.email}</TableCell>
                     <TableCell align="center">{user.phone}</TableCell>
-                    <TableCell align="right">{user.website}</TableCell>
+                    <TableCell align="center">{user.website}</TableCell>
                     <TableCell align="center">
                       {user.address.street},{user.address.suite}
                     </TableCell>
