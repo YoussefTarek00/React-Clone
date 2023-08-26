@@ -1,6 +1,6 @@
 import { Box } from "@mui/material";
 import Landing from "../Landing/Landing";
-import UserData from "./UserListData";
+import UserData from "./UserListSection";
 
 const Home = () => {
   return (
