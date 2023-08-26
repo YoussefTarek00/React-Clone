@@ -1,10 +1,10 @@
 import { Stack, Typography, Box, Button, ThemeProvider } from "@mui/material";
-import UserList from "../../../RTK features/Slices/users/UserList";
-import { ButtonTheme } from "../../../Style/AccessThemes";
+import UserList from "./UserList";
+import { ButtonTheme } from "../../../../Style/AccessThemes";
 import { useNavigate } from "react-router-dom";
 
 const UserData = () => {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   return (
     <Stack
       spacing={2}
@@ -52,38 +52,38 @@ const UserData = () => {
           . <br />
           Then combine them into entire screens, pages, and apps.
         </Typography>
-        
+
         <UserList />
-        <Typography variant="h4" color="inherit" sx={{mt:3}}>
-         For Specific Details 
+        <Typography variant="h4" color="inherit" sx={{ mt: 3 }}>
+          For Specific Details
         </Typography>
-        <Typography variant="h6" color="inherit" >
-        Click The Button Below
-                </Typography>
-                <Box
-        sx={{
-          "& button": {
-            m: 1,
-            borderRadius: 10,
-            px: 2,
-            fontWeight: "bold",
-            fontSize: 17,
-            textTransform: "none",
-          },
-        }}
-      >
-        <ThemeProvider theme={ButtonTheme}>
-          <Button
-            variant="contained"
-            size="large"
-            sx={{ color: "#eee", bgcolor: `primary.main` }}
-            onClick={() => {
-              navigate("/usertable");
-            }}
-          >
-            More Details
-          </Button>
-        </ThemeProvider>
+        <Typography variant="h6" color="inherit">
+          Click The Button Below
+        </Typography>
+        <Box
+          sx={{
+            "& button": {
+              m: 1,
+              borderRadius: 10,
+              px: 2,
+              fontWeight: "bold",
+              fontSize: 17,
+              textTransform: "none",
+            },
+          }}
+        >
+          <ThemeProvider theme={ButtonTheme}>
+            <Button
+              variant="contained"
+              size="large"
+              sx={{ color: "#eee", bgcolor: `primary.main` }}
+              onClick={() => {
+                navigate("/usertable");
+              }}
+            >
+              More Details
+            </Button>
+          </ThemeProvider>
         </Box>
       </Box>
     </Stack>

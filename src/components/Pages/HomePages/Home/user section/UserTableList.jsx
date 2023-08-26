@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { fetchData } from "../../../RTK features/Slices/users/userSlice";
+import { fetchData } from "../../../../RTK features/Slices/users/userSlice";
 import {
   Box,
   Paper,
@@ -12,7 +12,7 @@ import {
   Typography,
 } from "@mui/material";
 import { Stack, TableContainer, Table } from "@mui/material";
-import { StyledSection } from "../../../Style/AccessThemes";
+import { StyledSection } from "../../../../Style/AccessThemes";
 
 const UserTableList = () => {
   const data = useSelector((state) => state.user);

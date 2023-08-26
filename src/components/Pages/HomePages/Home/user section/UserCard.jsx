@@ -10,7 +10,7 @@ import {
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import { useState } from "react";
 import { PropTypes } from "prop-types";
-import { ExpandMore } from "../../../Style/AccessThemes";
+import { ExpandMore } from "../../../../Style/AccessThemes";
 
 const UserCard = ({ user }) => {
   const [expanded, setExpanded] = useState(false);

@@ -2,7 +2,7 @@ import { Route, Routes } from "react-router-dom";
 import NotFound from "./components/NotFound/NotFound";
 import Root from "./components/Root";
 import Home from "./components/Pages/HomePages/Home/Home";
-import UserTableList from "./components/Pages/HomePages/Home/UserTableList";
+import UserTableList from "./components/Pages/HomePages/Home/user section/UserTableList";
 
 function App() {
   return (

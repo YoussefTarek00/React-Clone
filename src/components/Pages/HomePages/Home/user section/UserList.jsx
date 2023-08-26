@@ -1,8 +1,8 @@
 import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { fetchData } from "./userSlice";
+import { fetchData } from "../../../../RTK features/Slices/users/userSlice";
 import { Box, Container, Grid, Skeleton, Typography } from "@mui/material";
-import UserCard from "../../../Pages/HomePages/Home/UserCard";
+import UserCard from "./UserCard";
 
 const UserList = () => {
   const data = useSelector((state) => state.user);

@@ -1,12 +1,12 @@
 import { Box } from "@mui/material";
 import Landing from "../Landing/Landing";
-import UserData from "./UserListSection";
+import UserListSection from "./user section/UserListSection";
 
 const Home = () => {
   return (
     <Box>
       <Landing />
-      <UserData />
+      <UserListSection />
     </Box>
   );
 };
