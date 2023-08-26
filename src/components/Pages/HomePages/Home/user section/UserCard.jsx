@@ -23,13 +23,13 @@ const UserCard = ({ user }) => {
         <CardHeader title={user.username} subheader={user.name} />
         <CardContent>
           <Typography sx={{ mb: 1.5 }} color="text.secondary">
-            E-mail ={">"} {user.email}
+            E-mail: {user.email}
           </Typography>
           <Typography sx={{ mb: 1.5 }} variant="body2" color="text.secondary">
-            Phone ={">"} {user.phone}
+            Phone: {user.phone}
           </Typography>
           <Typography variant="body2" color="text.secondary">
-            Website ={">"} {user.website}
+            Website: {user.website}
           </Typography>
         </CardContent>
         <CardActions disableSpacing>

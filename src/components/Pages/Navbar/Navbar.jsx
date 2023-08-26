@@ -1,4 +1,6 @@
 import { useTheme } from "@mui/material/styles";
+import * as React from "react";
+
 import {
   Box,
   Toolbar,
@@ -7,7 +9,12 @@ import {
   Avatar,
   ListItem,
   Link,
+  useMediaQuery,
+  Dialog,
+  Divider,
+  Slide,
 } from "@mui/material";
+import CloseIcon from "@mui/icons-material/Close";
 
 import MenuIcon from "@mui/icons-material/Menu";
 import SearchIcon from "@mui/icons-material/Search";
@@ -29,13 +36,17 @@ import {
 import NavbarData from "./Data/NavbarData";
 import NavbarMenu from "./Data/NavbarMenu";
 
+const Transition = React.forwardRef(function Transition(props, ref) {
+  return <Slide direction="up" ref={ref} {...props} />;
+});
+
 const Navbar = ({ mode, setMyMode }) => {
+  const navigate = useNavigate();
+  const theme = useTheme();
+
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = useState(null);
 
   const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
-
-  const navigate = useNavigate();
-  const theme = useTheme();
 
   const handleMobileMenuClose = () => {
     setMobileMoreAnchorEl(null);
@@ -44,6 +55,8 @@ const Navbar = ({ mode, setMyMode }) => {
   const handleMobileMenuOpen = (event) => {
     setMobileMoreAnchorEl(event.currentTarget);
   };
+
+  const fullScreen = useMediaQuery(theme.breakpoints.down("md"));
 
   const mobileMenuId = "primary-search-account-menu-mobile";
 
@@ -63,7 +76,27 @@ const Navbar = ({ mode, setMyMode }) => {
       open={isMobileMenuOpen}
       onClose={handleMobileMenuClose}
     >
-      <NavbarMenu />
+      <Dialog
+        sx={{ mt: 7 }}
+        fullScreen={fullScreen}
+        open={isMobileMenuOpen}
+        onClick={handleMobileMenuClose}
+        PaperProps={{ style: { backgroundColor: theme.palette.bgColors.main } }}
+        TransitionComponent={Transition}
+      >
+        <IconButton
+          size="large"
+          color="inherit"
+          onClick={handleMobileMenuClose}
+          aria-label="close"
+          sx={{ p: 2, width: "60px" }}
+        >
+          <CloseIcon />
+        </IconButton>
+        <Divider />
+        <NavbarMenu />
+        <Divider />
+      </Dialog>
     </Menu>
   );
 
@@ -71,6 +104,19 @@ const Navbar = ({ mode, setMyMode }) => {
     <Box>
       <StyledAppBar elevation={0}>
         <Toolbar>
+          <Box sx={{ display: { xs: "flex", md: "none" } }}>
+            <IconButton
+              size="large"
+              edge="start"
+              aria-label="show more"
+              aria-controls={mobileMenuId}
+              aria-haspopup="true"
+              onClick={handleMobileMenuOpen}
+              color="inherit"
+            >
+              <MenuIcon />
+            </IconButton>
+          </Box>
           <IconButton
             size="large"
             edge="start"
@@ -132,18 +178,6 @@ const Navbar = ({ mode, setMyMode }) => {
                 <GitHubIcon />
               </IconButton>
             </Link>
-          </Box>
-          <Box sx={{ display: { xs: "flex", md: "none" } }}>
-            <IconButton
-              size="large"
-              aria-label="show more"
-              aria-controls={mobileMenuId}
-              aria-haspopup="true"
-              onClick={handleMobileMenuOpen}
-              color="inherit"
-            >
-              <MenuIcon />
-            </IconButton>
           </Box>
         </Toolbar>
       </StyledAppBar>
