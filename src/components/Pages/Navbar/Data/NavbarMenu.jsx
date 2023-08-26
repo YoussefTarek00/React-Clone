@@ -5,15 +5,13 @@ import { useNavigate } from "react-router-dom";
 const NavbarMenu = () => {
   const navigate = useNavigate();
 
-  
-  
   return (
-    <Box display='flex' justifyContent='space-between' >
+    <Box display="flex" justifyContent="space-around">
       {myList.map((item) => {
         return (
           <MenuItem
             key={item.text}
-            sx={{ p: 3,borderRadius:10 }}
+            sx={{ p: 3, borderRadius: 10 }}
             onClick={() => {
               navigate(item.path);
             }}
