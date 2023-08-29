@@ -13,7 +13,6 @@ import {
   Dialog,
   Divider,
   Slide,
-  Stack,
 } from "@mui/material";
 import CloseIcon from "@mui/icons-material/Close";
 import MenuIcon from "@mui/icons-material/Menu";
@@ -34,6 +33,7 @@ import {
 import NavbarData from "./Data/NavbarData";
 import NavbarMenu from "./Data/NavbarMenu";
 import SupportUk from "./SupportUk";
+import useIsScrolledDown from "./HideOnScroll";
 
 const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
@@ -98,11 +98,11 @@ const Navbar = ({ mode, setMyMode }) => {
       </Dialog>
     </Menu>
   );
-
+  const isScrolledDown = useIsScrolledDown(100);
   return (
-    <Stack>
-      <StyledAppBar elevation={0} >
-        <Box sx={{ display: { sm: "none", md: "block" } }}>
+    <>
+      <StyledAppBar elevation={0}>
+        <Box sx={{ display: isScrolledDown ? "none" : "block" }}>
           <SupportUk />
         </Box>
         <Toolbar>
@@ -184,7 +184,7 @@ const Navbar = ({ mode, setMyMode }) => {
         </Toolbar>
       </StyledAppBar>
       {renderMobileMenu}
-    </Stack>
+    </>
   );
 };
 

@@ -1,8 +1,12 @@
 import { Box, Link, Typography } from "@mui/material";
 import { UkSection } from "../../Style/AccessThemes";
 
+
+
+
 const SupportUk = () => {
   return (
+    <Box sx={{ display: {xs:'none', sm: "none", md: "block" } }}>
     <UkSection sx={{ display: "flex", justifyContent: "center", py: 1 }}>
       <Typography>Support Ukraine 🇺🇦</Typography>
       <Link
@@ -14,6 +18,7 @@ const SupportUk = () => {
         Help Provide Humanitarian Aid to Ukraine
       </Link>
     </UkSection>
+    </Box>
   );
 };
 
