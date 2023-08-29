@@ -13,19 +13,17 @@ import {
   Dialog,
   Divider,
   Slide,
+  Stack,
 } from "@mui/material";
 import CloseIcon from "@mui/icons-material/Close";
-
 import MenuIcon from "@mui/icons-material/Menu";
 import SearchIcon from "@mui/icons-material/Search";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import NightlightRoundIcon from "@mui/icons-material/NightlightRound";
 import LightModeIcon from "@mui/icons-material/LightMode";
-
 import { useState } from "react";
 import ReactLogo from "../../../../Images/logo192.png";
 import { useNavigate } from "react-router-dom";
-
 import { PropTypes } from "prop-types";
 import {
   Search,
@@ -35,6 +33,7 @@ import {
 } from "../../Style/AccessThemes";
 import NavbarData from "./Data/NavbarData";
 import NavbarMenu from "./Data/NavbarMenu";
+import SupportUk from "./SupportUk";
 
 const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
@@ -101,8 +100,11 @@ const Navbar = ({ mode, setMyMode }) => {
   );
 
   return (
-    <Box>
-      <StyledAppBar elevation={0}>
+    <Stack>
+      <StyledAppBar elevation={0} >
+        <Box sx={{ display: { sm: "none", md: "block" } }}>
+          <SupportUk />
+        </Box>
         <Toolbar>
           <Box sx={{ display: { xs: "flex", md: "none" } }}>
             <IconButton
@@ -182,7 +184,7 @@ const Navbar = ({ mode, setMyMode }) => {
         </Toolbar>
       </StyledAppBar>
       {renderMobileMenu}
-    </Box>
+    </Stack>
   );
 };
 

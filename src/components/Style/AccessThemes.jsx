@@ -51,6 +51,10 @@ export const StyledSection = styled("div")(({ theme }) => ({
   background: theme.palette.bgColors.main,
 }));
 
+export const UkSection = styled("div")(({ theme }) => ({
+  background: theme.palette.UKbgColors.main,
+}));
+
 export const ButtonTheme = createTheme({
   palette: {
     primary: {

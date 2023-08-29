@@ -1,11 +1,11 @@
 import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { fetchData } from "../../../../RTK features/Slices/users/userSlice";
+import { fetchData } from "../../../../RTK features/Slices/posts/postSlice";
 import { Box, Container, Grid, Skeleton, Typography } from "@mui/material";
-import UserCard from "./UserCard";
+import PostsCards from "./PostsCards";
 
-const UserList = () => {
-  const data = useSelector((state) => state.user);
+const PostsList = () => {
+  const data = useSelector((state) => state.post);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -13,16 +13,18 @@ const UserList = () => {
   }, [dispatch]);
 
   return (
-    <Box>
-      <Typography
-        variant="h2"
-        color="inherit"
-        sx={{ mt: 10, textAlign: "center" }}
-      >
-        List of Users
+    <Box
+      sx={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+      }}
+    >
+      <Typography variant="h2" color="inherit" sx={{ m: 10 }}>
+        List of Posts:
       </Typography>
       {data.loading && (
-        <Typography variant="h2" color="inherit">
+        <Typography variant="h2" color="inherit" >
           <Skeleton
             variant="rectangular"
             animation="wave"
@@ -38,10 +40,10 @@ const UserList = () => {
       ) : null}
       {!data.loading && data.data.length ? (
         <Container>
-          <Grid container spacing={3}>
-            {data.data.map((user) => (
-              <Grid item key={user.id} xs={12} md={6} lg={4}>
-                <UserCard user={user} />
+          <Grid container spacing={3} alignItems="stretch">
+            {data.data.map((post) => (
+              <Grid item key={post.id} xs={12} md={6} lg={4}>
+                <PostsCards post={post} />
               </Grid>
             ))}
           </Grid>
@@ -51,4 +53,4 @@ const UserList = () => {
   );
 };
 
-export default UserList;
+export default PostsList;

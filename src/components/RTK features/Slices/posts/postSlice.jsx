@@ -7,14 +7,14 @@ const initialState = {
   error: "",
 };
 
-export const fetchData = createAsyncThunk("user/fetchData", () => {
+export const fetchData = createAsyncThunk("post/fetchData", () => {
   return axios
-    .get("https://jsonplaceholder.typicode.com/users")
+    .get("https://jsonplaceholder.typicode.com/posts")
     .then((res) => res.data);
 });
 
-const userSlice = createSlice({
-  name: "user",
+const postSlice = createSlice({
+  name: "post",
   initialState,
   reducers: {},
   extraReducers: (builder) => {
@@ -34,4 +34,4 @@ const userSlice = createSlice({
   },
 });
 
-export default userSlice.reducer;
+export default postSlice.reducer;

@@ -12,25 +12,19 @@ import { useState } from "react";
 import { PropTypes } from "prop-types";
 import { ExpandMore } from "../../../../Style/AccessThemes";
 
-const UserCard = ({ user }) => {
+const PostsCards = ({ post }) => {
   const [expanded, setExpanded] = useState(false);
   const handleExpandClick = () => {
     setExpanded(!expanded);
   };
   return (
-    <Box>
-      <Card elevation={3}>
-        <CardHeader title={user.username} subheader={user.name} />
+    <Box >
+      <Card elevation={3}  sx={{textAlign:'center', height:'100%'}}>
+        <CardHeader title={post.id} subheader={post.title} />
         <CardContent>
-          <Typography sx={{ mb: 1.5 }} color="text.secondary">
-            E-mail: {user.email}
-          </Typography>
           <Typography sx={{ mb: 1.5 }} variant="body2" color="text.secondary">
-            Phone: {user.phone}
-          </Typography>
-          <Typography variant="body2" color="text.secondary">
-            Website: {user.website}
-          </Typography>
+            Description: {post.body}
+        </Typography>
         </CardContent>
         <CardActions disableSpacing>
           <ExpandMore
@@ -44,15 +38,12 @@ const UserCard = ({ user }) => {
         </CardActions>
         <Collapse in={expanded} timeout="auto" unmountOnExit>
           <CardContent>
-            <Typography paragraph>More Details:</Typography>
+            <Typography paragraph>About Post:</Typography>
             <Typography>
-              Address: {user.address.street}, {user.address.suite},
-              {user.address.city},{user.address.zipcode},{user.address.geo.lat},
-              {user.address.geo.lng}
+              Title: {post.title}
             </Typography>
             <Typography>
-              Company: {user.company.name}, {user.company.catchphrase},
-              {user.company.bs}
+              Description: {post.body}
             </Typography>
           </CardContent>
         </Collapse>
@@ -61,7 +52,7 @@ const UserCard = ({ user }) => {
   );
 };
 
-UserCard.propTypes = {
-  user: PropTypes.any.isRequired,
+PostsCards.propTypes = {
+  post: PropTypes.any.isRequired,
 };
-export default UserCard;
+export default PostsCards;

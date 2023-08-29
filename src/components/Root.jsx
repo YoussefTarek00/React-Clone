@@ -19,6 +19,7 @@ const Root = () => {
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <Box>
+        
         <Navbar mode={mode} setMyMode={setMyMode} />
         <Outlet />
       </Box>
