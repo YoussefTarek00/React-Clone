@@ -1,8 +1,16 @@
 import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { fetchData } from "../../../../RTK features/Slices/posts/postSlice";
-import { Box, Container, Grid, Skeleton, Typography } from "@mui/material";
+import {
+  Box,
+  Grid,
+  Link,
+  Skeleton,
+  Typography,
+} from "@mui/material";
 import PostsCards from "./PostsCards";
+import ChevronRightIcon from "@mui/icons-material/ChevronRight";
+import { StyledSection } from "../../../../Style/AccessThemes";
 
 const PostsList = () => {
   const data = useSelector((state) => state.post);
@@ -13,17 +21,51 @@ const PostsList = () => {
   }, [dispatch]);
 
   return (
-    <Box
+    <StyledSection
       sx={{
         display: "flex",
         flexDirection: "column",
-        alignItems: "center",
         pb: 10,
+        px: { xs: 2, sm: 5, md: 10, lg: 25 },
       }}
     >
-      <Typography variant="h2" color="inherit" sx={{ mt: 20 }}>
-        List of Posts:
-      </Typography>
+      <Box sx={{ mt: 15 }}>
+        <Link
+          href="/blog"
+          underline="hover"
+          sx={{
+            display: "flex",
+            width: 10,
+            mb: 4,
+            fontSize: 13,
+            textTransform: "uppercase",
+            fontWeight: "700",
+            lineHeight: 2,
+          }}
+        >
+          Blog <ChevronRightIcon />
+        </Link>
+
+        <Typography
+          variant="h4"
+          sx={{ mb: 3, fontWeight: "700", fontSize: "40px" }}
+        >
+          React Blog
+        </Typography>
+        <Typography
+          variant="h6"
+          sx={{ mb: 5, fontWeight: "500", whiteSpace: "pre-wrap" }}
+        >
+          This blog is the official source for the updates from the React team.
+          Anything important, including release notes or deprecation notices,
+          will be posted here first. You can also follow the {""}
+          <Link href="https://twitter.com" underline="hover">
+            @reactjs
+          </Link>{" "}
+          account on Twitter, but you won’t miss anything essential if you only
+          read this blog.
+        </Typography>
+      </Box>
       {data.loading && (
         <Typography variant="h2" color="inherit">
           <Skeleton
@@ -40,17 +82,15 @@ const PostsList = () => {
         </Typography>
       ) : null}
       {!data.loading && data.data.length ? (
-        <Container>
-          <Grid container spacing={3} alignItems="stretch">
-            {data.data.map((post) => (
-              <Grid item key={post.id} xs={12} md={6} lg={4}>
-                <PostsCards post={post} />
-              </Grid>
-            ))}
-          </Grid>
-        </Container>
+        <Grid container spacing={2}>
+          {data.data.map((post) => (
+            <Grid item key={post.id} xs={12} md={12} lg={12}>
+              <PostsCards post={post} />
+            </Grid>
+          ))}
+        </Grid>
       ) : null}
-    </Box>
+    </StyledSection>
   );
 };
 
