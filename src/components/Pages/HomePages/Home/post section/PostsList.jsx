@@ -18,13 +18,14 @@ const PostsList = () => {
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
+        pb: 10,
       }}
     >
-      <Typography variant="h2" color="inherit" sx={{ m: 10 }}>
+      <Typography variant="h2" color="inherit" sx={{ mt: 20 }}>
         List of Posts:
       </Typography>
       {data.loading && (
-        <Typography variant="h2" color="inherit" >
+        <Typography variant="h2" color="inherit">
           <Skeleton
             variant="rectangular"
             animation="wave"

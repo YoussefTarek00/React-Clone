@@ -7,26 +7,26 @@ import {
   Collapse,
   Box,
 } from "@mui/material";
-import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import { useState } from "react";
+// import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+// import { useState } from "react";
 import { PropTypes } from "prop-types";
-import { ExpandMore } from "../../../../Style/AccessThemes";
+// import { ExpandMore } from "../../../../Style/AccessThemes";
 
 const PostsCards = ({ post }) => {
-  const [expanded, setExpanded] = useState(false);
-  const handleExpandClick = () => {
-    setExpanded(!expanded);
-  };
+  // const [expanded, setExpanded] = useState(false);
+  // const handleExpandClick = () => {
+  //   setExpanded(!expanded);
+  // };
   return (
     <Box >
-      <Card elevation={3}  sx={{textAlign:'center', height:'100%'}}>
+      <Card elevation={3}  sx={{textAlign:'center', height:'300px'}}>
         <CardHeader title={post.id} subheader={post.title} />
         <CardContent>
           <Typography sx={{ mb: 1.5 }} variant="body2" color="text.secondary">
             Description: {post.body}
         </Typography>
         </CardContent>
-        <CardActions disableSpacing>
+        {/* <CardActions disableSpacing>
           <ExpandMore
             expand={expanded}
             onClick={handleExpandClick}
@@ -46,7 +46,7 @@ const PostsCards = ({ post }) => {
               Description: {post.body}
             </Typography>
           </CardContent>
-        </Collapse>
+        </Collapse> */}
       </Card>
     </Box>
   );
