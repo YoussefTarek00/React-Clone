@@ -23,7 +23,14 @@ const Footer = () => {
         sx={{ mt: 20, height: "300px" }}
       >
         <Grid item xs={6} sm={6} md={4} lg={2}>
-          <Link href="https://opensource.fb.com/" target='_blank' underline="none" color="inherit" display="flex" sx={{fontWeight:'bold'}}>
+          <Link
+            href="https://opensource.fb.com/"
+            target="_blank"
+            underline="none"
+            color="inherit"
+            display="flex"
+            sx={{ fontWeight: "bold" }}
+          >
             <Avatar
               src={metaLogo}
               alt="meta logo"
@@ -41,7 +48,12 @@ const Footer = () => {
         </Grid>
 
         <Grid item xs={6} sm={6} md={4} lg={2}>
-          <Link href="#" underline="hover" color="inherit" sx={{fontWeight:'bold'}}>
+          <Link
+            href="#"
+            underline="hover"
+            color="inherit"
+            sx={{ fontWeight: "bold" }}
+          >
             Learn React
           </Link>
 
@@ -67,7 +79,12 @@ const Footer = () => {
           </Stack>
         </Grid>
         <Grid item xs={6} sm={6} md={4} lg={2}>
-          <Link href="#" underline="hover" color="inherit" sx={{fontWeight:'bold'}}>
+          <Link
+            href="#"
+            underline="hover"
+            color="inherit"
+            sx={{ fontWeight: "bold" }}
+          >
             API Reference
           </Link>
           <Stack spacing={1} sx={{ mt: 2, fontSize: 14 }}>
@@ -80,7 +97,12 @@ const Footer = () => {
           </Stack>
         </Grid>
         <Grid item xs={6} sm={6} md={4} lg={2}>
-          <Link href="#" underline="hover" color="inherit" sx={{fontWeight:'bold'}}>
+          <Link
+            href="#"
+            underline="hover"
+            color="inherit"
+            sx={{ fontWeight: "bold" }}
+          >
             Community
           </Link>
 
@@ -100,7 +122,7 @@ const Footer = () => {
           </Stack>
         </Grid>
         <Grid item xs={6} sm={6} md={4} lg={2}>
-          <Typography sx={{fontWeight:'bold'}}>More</Typography>
+          <Typography sx={{ fontWeight: "bold" }}>More</Typography>
           <Stack spacing={1} sx={{ mt: 2, fontSize: 14 }}>
             <Link href="/blog" underline="hover" color="inherit">
               Blog
@@ -116,7 +138,7 @@ const Footer = () => {
             </Link>
           </Stack>
 
-          <Box sx={{ mt: 5, display: "flex"}}>
+          <Box sx={{ mt: 5, display: "flex" }}>
             <Link
               color="inherit"
               href="#"
@@ -156,96 +178,3 @@ const Footer = () => {
 };
 
 export default Footer;
-
-{
-  /* <Grid container spacing={3} justifyContent='space-between' sx={{mt:20}}>
-    <Grid item xs={2}>
-        <Grid container spacing={1} direction='column'>
-            <Grid item xs={4}>
-<Link href="#" underline="none" color="inherit">MetaOpenSource</Link>
-</Grid>
-
-<Grid item xs={4}>
-<Typography variant="body1"  color="inherit">©2023</Typography>
-</Grid>
-</Grid>
-    </Grid>
-
-
-
-    <Grid item xs={2}>
-        <Grid container spacing={1} direction='column'>
-            <Grid item xs={4}>
-            <Link href="#" underline="hover" color="inherit">Learn React</Link>
-</Grid>
-<Grid item xs={4}>
-<Link href="#" underline="hover" color="inherit">Quick Start</Link>
-
-</Grid>
-<Grid item xs={4}>
-<Link href="#" underline="hover" color="inherit">Installation</Link>
-
-</Grid>
-<Grid item xs={4}>
-<Link href="#" underline="hover" color="inherit">Descriing the UI</Link>
-
-</Grid>
-<Grid item xs={4}>
-<Link href="#" underline="hover" color="inherit">Adding Interactivity</Link>
-
-</Grid>
-<Grid item xs={4}>
-<Link href="#" underline="hover" color="inherit">Managing State</Link>
-
-</Grid>
-<Grid item xs={4}>
-<Link href="#" underline="hover" color="inherit">Escape Hatches</Link>
-
-</Grid>
-</Grid>
-    </Grid>
-
-
-
-    <Grid item xs={2}>
-        <Grid container spacing={1}>
-            <Grid item xs={4}>
-            <Link href="#" underline="hover" color="inherit">API Reference</Link>
-<Typography   color="inherit">©2023</Typography>
-</Grid>
-</Grid>
-    </Grid>
-
-
-    <Grid item xs={2}>
-        <Grid container spacing={1}>
-            <Grid item xs={4}>
-<Link href="#" underline="hover" color="inherit">Community</Link>
-<Typography   color="inherit">©2023</Typography>
-</Grid>
-</Grid>
-    </Grid>
-    
-    
-    <Grid item xs={2}>
-        <Grid container spacing={1}>
-            <Grid item xs={4}>
-            <Typography>More</Typography>
-</Grid>
-</Grid>
-    </Grid>
-
-
-    
-
-
-    
-
-
-    
-
-
-    
-
-</Grid> */
-}

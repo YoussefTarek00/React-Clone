@@ -1,21 +1,15 @@
-import { Box, Stack, Typography, Button, useTheme } from "@mui/material";
+import { Box, Stack, Typography } from "@mui/material";
 import DevicesIcon from "@mui/icons-material/Devices";
+import CustomButton from "../../Button component/CustomButton";
+import { useNavigate } from "react-router-dom";
+import { useStyles } from "../../page setup/PageSetupStyle";
 
 const SixSection = () => {
-  const theme = useTheme();
+  const navigate = useNavigate();
+  const classes = useStyles();
 
   return (
-    <Stack
-      spacing={2}
-      sx={{
-        width: "100%",
-        display: "flex",
-        alignItems: "center",
-        pt: "70px",
-        pb: "7px",
-        height: 800,
-      }}
-    >
+    <Stack spacing={2} className={classes.root}>
       <Box sx={{ textAlign: "center" }}>
         <Typography variant="h2" color="inherit">
           Use the best from <br />
@@ -37,29 +31,13 @@ const SixSection = () => {
           the platform silos, and form teams that own entire features
           end-to-end.
         </Typography>
-        <Box
-          sx={{
-            "& button": {
-              mt: 5,
-              borderRadius: 10,
-              px: 3,
-              fontWeight: "bold",
-              fontSize: 17,
-              textTransform: "none",
-              color: theme.palette.Color.main,
-            },
+        <CustomButton
+          icon={<DevicesIcon />}
+          ButtonText="Build for native platforms"
+          onClick={() => {
+            navigate("/react native");
           }}
-        >
-          <Button
-            variant="outlined"
-            size="large"
-            onClick={() => {
-              navigate("/add-react-to-an-existing-project");
-            }}
-          >
-            <DevicesIcon sx={{ mr: 2 }} /> Build for native platforms {">"}
-          </Button>
-        </Box>
+        />
       </Box>
     </Stack>
   );

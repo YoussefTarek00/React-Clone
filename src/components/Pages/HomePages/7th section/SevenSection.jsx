@@ -1,23 +1,20 @@
-import { Box, Grid, Link, Stack, Typography,Button, useTheme } from "@mui/material";
+import { Box, Grid, Link, Stack, Typography } from "@mui/material";
 import { StyledSection } from "../../../Style/AccessThemes";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import VideoLabelIcon from "@mui/icons-material/VideoLabel";
-import DevicesIcon from '@mui/icons-material/Devices';
 import { useNavigate } from "react-router-dom";
+import ScienceIcon from "@mui/icons-material/Science";
+import CustomButton from "../../Button component/CustomButton";
+import DevicesIcon from "@mui/icons-material/Devices";
+import { useStyles } from "../../page setup/PageSetupStyle";
 
 const SevenSection = () => {
-  const navigate = useNavigate()
-  const theme = useTheme()
+  const navigate = useNavigate();
+  const classes = useStyles();
+
   return (
     <StyledSection>
-      <Stack
-        sx={{
-          width: "100%",
-          pt: "70px",
-          pb: "7px",
-          height: 800,
-        }}
-      >
+      <Stack className={classes.root}>
         <Grid container spacing={0}>
           <Grid item xs={12} md={6} sx={{ pl: 7 }}>
             <Typography variant="h2" color="inherit">
@@ -36,6 +33,13 @@ const SevenSection = () => {
               <br /> Only proven approaches become a part of React.
               <br />
             </Typography>
+            <CustomButton
+              icon={<DevicesIcon />}
+              ButtonText="Read more React news"
+              onClick={() => {
+                navigate("/blog");
+              }}
+            />
           </Grid>
 
           <Grid item xs={12} md={5} lg={4}>
@@ -51,6 +55,7 @@ const SevenSection = () => {
                     border: "1px solid",
                     borderRadius: 5,
                     fontSize: 22,
+                    height: "160px",
                   }}
                 >
                   <Link href="#" underline="hover" color="inherit">
@@ -75,18 +80,19 @@ const SevenSection = () => {
                     border: "1px solid",
                     borderRadius: 5,
                     fontSize: 22,
+                    height: "160px",
                   }}
                 >
                   <Link href="#" underline="hover" color="inherit">
-                    React Canaries: Incremental Feature Rollout
+                    React Labs: March 2023
                   </Link>
-                  <Box sx={{ p: 1, fontSize: 15 }}>
+                  <Box sx={{ p: 1, fontSize: 15, mt: 4 }}>
                     <Typography
                       variant="P"
                       color="text.secondary"
                       display="flex"
                     >
-                      <VideoLabelIcon sx={{ mr: 1 }} /> May 3,2023
+                      <ScienceIcon sx={{ mr: 1 }} /> March 22,2023
                     </Typography>
                   </Box>
                 </Box>
@@ -99,18 +105,19 @@ const SevenSection = () => {
                     border: "1px solid",
                     borderRadius: 5,
                     fontSize: 22,
+                    height: "160px",
                   }}
                 >
                   <Link href="#" underline="hover" color="inherit">
-                    React Canaries: Incremental Feature Rollout
+                    Introducing react.dev
                   </Link>
-                  <Box sx={{ p: 1, fontSize: 15 }}>
+                  <Box sx={{ p: 1, fontSize: 15, mt: 4 }}>
                     <Typography
                       variant="P"
                       color="text.secondary"
                       display="flex"
                     >
-                      <VideoLabelIcon sx={{ mr: 1 }} /> May 3,2023
+                      <VideoLabelIcon sx={{ mr: 1 }} /> March 16,2023
                     </Typography>
                   </Box>
                 </Box>
@@ -123,42 +130,25 @@ const SevenSection = () => {
                     border: "1px solid",
                     borderRadius: 5,
                     fontSize: 22,
+                    height: "160px",
                   }}
                 >
                   <Link href="#" underline="hover" color="inherit">
-                    React Canaries: Incremental Feature Rollout
+                    React Labs: June 2022
                   </Link>
-                  <Box sx={{ p: 1, fontSize: 15 }}>
+                  <Box sx={{ p: 1, fontSize: 15, mt: 4 }}>
                     <Typography
                       variant="P"
                       color="text.secondary"
                       display="flex"
                     >
-                      <VideoLabelIcon sx={{ mr: 1 }} /> May 3,2023
+                      <ScienceIcon sx={{ mr: 1 }} /> June 15,2022
                     </Typography>
                   </Box>
                 </Box>
               </Grid>
             </Grid>
           </Grid>
-          <Box sx={{ "& button": {
-            mt: 5,
-            ml:5,
-            borderRadius: 10,
-            px: 3,
-            fontWeight: "bold",
-            fontSize: 17,
-            textTransform: "none", color: theme.palette.Color.main}}}>
-        <Button
-          variant="outlined"
-          size="large"
-          onClick={() => {
-            navigate("/add-react-to-an-existing-project");
-          }}
-        >
-<DevicesIcon  sx={{mr:2}}/>Read more React news {'>'}
-        </Button>
-        </Box>
         </Grid>
       </Stack>
     </StyledSection>

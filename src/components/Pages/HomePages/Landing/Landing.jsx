@@ -3,23 +3,23 @@ import {
   Box,
   Button,
   Stack,
-  ThemeProvider,
   Typography,
   useTheme,
 } from "@mui/material";
 import ReactLogo from "../../../../../Images/logo192.png";
 import { useNavigate } from "react-router-dom";
-import { ButtonTheme, StyledSection } from "../../../Style/AccessThemes";
+import { StyledSection } from "../../../Style/AccessThemes";
+import GetStartedButton from "../../Button component/GetStartedButton";
 
 const Landing = () => {
   const navigate = useNavigate();
   const theme = useTheme();
+
   return (
     <StyledSection>
       <Stack
         spacing={2}
         sx={{
-          width: "100%",
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
@@ -40,32 +40,18 @@ const Landing = () => {
             The library for web and native user interfaces
           </Typography>
         </Box>
-        <Box
-          sx={{
-            "& button": {
+        <Box display="flex">
+          <GetStartedButton text="Learn React" />
+          <Button
+            sx={{
+              color: theme.palette.Color.main,
               m: 1,
               borderRadius: 10,
               px: 2,
               fontWeight: "bold",
               fontSize: 17,
               textTransform: "none",
-            },
-          }}
-        >
-          <ThemeProvider theme={ButtonTheme}>
-            <Button
-              variant="contained"
-              size="large"
-              sx={{ color: "#eee", bgcolor: `primary.main` }}
-              onClick={() => {
-                navigate("/learn");
-              }}
-            >
-              Learn React
-            </Button>
-          </ThemeProvider>
-          <Button
-            sx={{ color: theme.palette.Color.main }}
+            }}
             variant="outlined"
             size="large"
             onClick={() => {

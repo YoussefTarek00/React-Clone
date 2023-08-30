@@ -1,42 +1,25 @@
 import { Box, Stack, Typography } from "@mui/material";
 import { StyledSection } from "../../../Style/AccessThemes";
+import BgTypography from "../../Text component/BgTypography";
+import { useStyles } from "../../page setup/PageSetupStyle";
 
 const ThirdSection = () => {
+  const classes = useStyles();
+
   return (
     <StyledSection>
-      <Stack
-        spacing={2}
-        sx={{
-          width: "100%",
-          display: "flex",
-          alignItems: "center",
-          pt: "70px",
-          pb: "7px",
-          height: 800,
-        }}
-      >
+      <Stack spacing={2} className={classes.root}>
         <Box sx={{ textAlign: "center" }}>
           <Typography variant="h2" color="inherit">
             Write components <br />
             with code and markup
           </Typography>
-          <Typography sx={{mt:5}} variant="h6" color="inherit">
+          <Typography sx={{ mt: 5 }} variant="h6" color="inherit">
             React components are JavaScript functions. Want to show some content
             <br />
-            conditionally? Use an
-            <Typography
-              variant="span"
-              sx={{ bgcolor: "#616161", px: 1, borderRadius: 2, mx: 0.5 }}
-            >
-              if
-            </Typography>
-            statement. Displaying a list? Try array
-            <Typography
-              variant="span"
-              sx={{ bgcolor: "#616161", px: 1, borderRadius: 2, mx: 0.5 }}
-            >
-              map()
-            </Typography>
+            conditionally? Use an <BgTypography variant="span" text="if" />{" "}
+            statement. Displaying a list? Try array{" "}
+            <BgTypography variant="span" text="map()" />
             . Learning <br /> React is learning programming.
           </Typography>
 

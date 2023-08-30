@@ -1,28 +1,17 @@
-import { Box, Button, Stack, Typography, useTheme } from "@mui/material";
+import { Box, Button, Stack, Typography } from "@mui/material";
 import { StyledSection } from "../../../Style/AccessThemes";
-import WorkspacesIcon from '@mui/icons-material/Workspaces';
+import WorkspacesIcon from "@mui/icons-material/Workspaces";
 import { useNavigate } from "react-router-dom";
-
+import CustomButton from "../../Button component/CustomButton";
+import { useStyles } from "../../page setup/PageSetupStyle";
 
 const FifthSection = () => {
+  const navigate = useNavigate();
+  const classes = useStyles();
 
-    const navigate = useNavigate()
-
-const theme = useTheme()
   return (
-
     <StyledSection>
-      <Stack
-        spacing={2}
-        sx={{
-          width: "100%",
-          display: "flex",
-          alignItems: "center",
-          pt: "70px",
-          pb: "7px",
-          height: 800,
-        }}
-      >
+      <Stack spacing={2} className={classes.root}>
         <Box sx={{ textAlign: "center" }}>
           <Typography variant="h2" color="inherit">
             Go full-stack <br />
@@ -62,23 +51,13 @@ const theme = useTheme()
             data from a file or a database, and pass it down to your interactive
             components
           </Typography>
-          <Box sx={{ "& button": {
-            mt: 5,
-            borderRadius: 10,
-            px: 3,
-            fontWeight: "bold",
-            fontSize: 17,
-            textTransform: "none", color: theme.palette.Color.main}}}>
-        <Button
-          variant="outlined"
-          size="large"
-          onClick={() => {
-            navigate("/start-a-new-react-project");
-          }}
-        >
-<WorkspacesIcon sx={{mr:2}}/> Get started with a framework {'>'}
-        </Button>
-        </Box>
+          <CustomButton
+            icon={<WorkspacesIcon />}
+            ButtonText="Get started with a framework"
+            onClick={() => {
+              navigate("/start-a-new-react-project");
+            }}
+          />
         </Box>
       </Stack>
     </StyledSection>

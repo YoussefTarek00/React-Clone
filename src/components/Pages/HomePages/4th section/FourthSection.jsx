@@ -1,23 +1,15 @@
-import { Box, Button, Stack, Typography, useTheme } from "@mui/material";
+import { Box, Stack, Typography } from "@mui/material";
 import { useNavigate } from "react-router-dom";
+import CustomButton from "../../Button component/CustomButton";
+import CodeOffIcon from "@mui/icons-material/CodeOff";
+import { useStyles } from "../../page setup/PageSetupStyle";
 
 const FourthSection = () => {
+  const navigate = useNavigate();
+  const classes = useStyles();
 
-const navigate = useNavigate()
-const theme = useTheme()
   return (
-    <Stack
-      spacing={2}
-      sx={{
-        width: "100%",
-        display: "flex",
-        alignItems: "center",
-        pt: "70px",
-        pb: "7px",
-        height: 800,
-       
-      }}
-    >
+    <Stack spacing={2} className={classes.root}>
       <Box sx={{ textAlign: "center" }}>
         <Typography variant="h2" color="inherit">
           Add interactivity <br /> wherever you need it{" "}
@@ -32,26 +24,17 @@ const theme = useTheme()
         </Typography>
         <Typography variant="h6" color="inherit" sx={{ mt: 30 }}>
           You don’t have to build your whole page in React. Add React to your
-          existing <br/> HTML page, and render interactive React components anywhere
-          on it.
+          existing <br /> HTML page, and render interactive React components
+          anywhere on it.
         </Typography>
-        <Box sx={{ "& button": {
-            mt: 5,
-            borderRadius: 10,
-            px: 3,
-            fontWeight: "bold",
-            fontSize: 17,
-            textTransform: "none", color: theme.palette.Color.main}}}>
-        <Button
-          variant="outlined"
-          size="large"
+
+        <CustomButton
+          icon={<CodeOffIcon />}
+          ButtonText="Add React to your page"
           onClick={() => {
             navigate("/add-react-to-an-existing-project");
           }}
-        >
-{'</>'} Add React to your page {'>'}
-        </Button>
-        </Box>
+        />
       </Box>
     </Stack>
   );
