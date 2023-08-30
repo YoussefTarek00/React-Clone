@@ -18,7 +18,7 @@ const getDesignTokens = (mode) => ({
       : {
           // palette values for dark mode
           bgColors: {
-            main: "rgb(35 39 47)",
+            main: "#23272f",
           },
           UKbgColors: {
             main: "#374151",

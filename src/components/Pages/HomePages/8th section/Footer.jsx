@@ -47,7 +47,7 @@ const Footer = () => {
           </Typography>
         </Grid>
 
-        <Grid item xs={6} sm={6} md={4} lg={2}>
+        <Grid item xs={6} sm={3} md={4} lg={2}>
           <Link
             href="#"
             underline="hover"
@@ -78,7 +78,7 @@ const Footer = () => {
             </Link>
           </Stack>
         </Grid>
-        <Grid item xs={6} sm={6} md={4} lg={2}>
+        <Grid item xs={6} sm={3} md={4} lg={2}>
           <Link
             href="#"
             underline="hover"
@@ -96,7 +96,7 @@ const Footer = () => {
             </Link>
           </Stack>
         </Grid>
-        <Grid item xs={6} sm={6} md={4} lg={2}>
+        <Grid item xs={6} sm={3} md={4} lg={2} sx={{mt:{xs:3,sm:0}}}>
           <Link
             href="#"
             underline="hover"
@@ -121,7 +121,7 @@ const Footer = () => {
             </Link>
           </Stack>
         </Grid>
-        <Grid item xs={6} sm={6} md={4} lg={2}>
+        <Grid item xs={6} sm={3} md={4} lg={2}>
           <Typography sx={{ fontWeight: "bold" }}>More</Typography>
           <Stack spacing={1} sx={{ mt: 2, fontSize: 14 }}>
             <Link href="/blog" underline="hover" color="inherit">

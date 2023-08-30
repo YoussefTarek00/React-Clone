@@ -9,12 +9,12 @@ const FourthSection = () => {
   const classes = useStyles();
 
   return (
-    <Stack spacing={2} className={classes.root}>
+    <Stack spacing={2} className={classes.root} sx={{px: { xs: 2, sm: 5, md: 10, lg: 25 }}}>
       <Box sx={{ textAlign: "center" }}>
-        <Typography variant="h2" color="inherit">
+        <Typography variant="h2" color="inherit" sx={{fontSize:{xs:25,sm:40,md:50}}}>
           Add interactivity <br /> wherever you need it{" "}
         </Typography>
-        <Typography sx={{ mt: 5 }} variant="h6" color="inherit">
+        <Typography sx={{ mt: 5,fontSize:{xs:18,sm:23} }} variant="h6" color="inherit">
           React components receive data and return what should appear on the
           screen. <br />
           You can pass them new data in response to an interaction, like when
@@ -22,7 +22,7 @@ const FourthSection = () => {
           types into an input. React will then update the screen to match the
           new data.
         </Typography>
-        <Typography variant="h6" color="inherit" sx={{ mt: 30 }}>
+        <Typography variant="h6" color="inherit" sx={{ mt: 30,fontSize:{xs:18,sm:23} }}>
           You don’t have to build your whole page in React. Add React to your
           existing <br /> HTML page, and render interactive React components
           anywhere on it.

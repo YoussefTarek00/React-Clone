@@ -13,20 +13,33 @@ const SevenSection = () => {
   const classes = useStyles();
 
   return (
-    <StyledSection>
+    <StyledSection sx={{ px: { xs: 2, sm: 5, md: 10 } }}>
       <Stack className={classes.root}>
         <Grid container spacing={0}>
-          <Grid item xs={12} md={6} sx={{ pl: 7 }}>
-            <Typography variant="h2" color="inherit">
-              Upgrade when the future is ready
+          <Grid item xs={12} md={12} lg={6}>
+            <Typography
+              variant="h2"
+              color="inherit"
+              sx={{ fontSize: { xs: 35, sm: 40, md: 50 } }}
+            >
+              Upgrade when the <br />
+              future is ready
             </Typography>
-            <Typography sx={{ mt: 5 }} variant="h6" color="inherit">
+            <Typography
+              sx={{ mt: 5, fontSize: { xs: 16, sm: 19, md: 22 } }}
+              variant="h6"
+              color="inherit"
+            >
               React approaches changes with care. Every React <br />
               commit is tested on business-critical surfaces with
               <br /> over a billion users. Over 100,000 React components <br />
               at Meta help validate every migration strategy.
             </Typography>
-            <Typography sx={{ mt: 3 }} variant="h6" color="inherit">
+            <Typography
+              sx={{ mt: 3, fontSize: { xs: 16, sm: 19, md: 22 } }}
+              variant="h6"
+              color="inherit"
+            >
               The React team is always researching how to improve <br />
               React. Some research takes years to pay off. React has
               <br /> a high bar for taking a research idea into production.
@@ -42,7 +55,7 @@ const SevenSection = () => {
             />
           </Grid>
 
-          <Grid item xs={12} md={5} lg={4}>
+          <Grid item xs={12} md={12} lg={6} sx={{ pt: { xs: 10 } }}>
             <Typography variant="P" color="text.secondary">
               <ExpandMoreIcon /> LATEST REACT NEWS
             </Typography>
@@ -61,7 +74,13 @@ const SevenSection = () => {
                   <Link href="#" underline="hover" color="inherit">
                     React Canaries: Incremental Feature Rollout
                   </Link>
-                  <Box sx={{ p: 1, fontSize: 15 }}>
+                  <Box
+                    sx={{
+                      p: 1,
+                      fontSize: 15,
+                      mt: { xs: 2, sm: 7, md: 3, lg: 0 },
+                    }}
+                  >
                     <Typography
                       variant="P"
                       color="text.secondary"
@@ -86,7 +105,13 @@ const SevenSection = () => {
                   <Link href="#" underline="hover" color="inherit">
                     React Labs: March 2023
                   </Link>
-                  <Box sx={{ p: 1, fontSize: 15, mt: 4 }}>
+                  <Box
+                    sx={{
+                      p: 1,
+                      fontSize: 15,
+                      mt: { xs: 7, sm: 7, md: 7, lg: 8 },
+                    }}
+                  >
                     <Typography
                       variant="P"
                       color="text.secondary"
@@ -111,7 +136,13 @@ const SevenSection = () => {
                   <Link href="#" underline="hover" color="inherit">
                     Introducing react.dev
                   </Link>
-                  <Box sx={{ p: 1, fontSize: 15, mt: 4 }}>
+                  <Box
+                    sx={{
+                      p: 1,
+                      fontSize: 15,
+                      mt: { xs: 7, sm: 7, md: 7, lg: 8 },
+                    }}
+                  >
                     <Typography
                       variant="P"
                       color="text.secondary"
@@ -136,7 +167,13 @@ const SevenSection = () => {
                   <Link href="#" underline="hover" color="inherit">
                     React Labs: June 2022
                   </Link>
-                  <Box sx={{ p: 1, fontSize: 15, mt: 4 }}>
+                  <Box
+                    sx={{
+                      p: 1,
+                      fontSize: 15,
+                      mt: { xs: 7, sm: 7, md: 7, lg: 8 },
+                    }}
+                  >
                     <Typography
                       variant="P"
                       color="text.secondary"

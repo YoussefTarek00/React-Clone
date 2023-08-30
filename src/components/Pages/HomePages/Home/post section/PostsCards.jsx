@@ -13,11 +13,10 @@ const PostsCards = ({ post }) => {
     <Box>
       <Card
         href="/"
-        elevation={2}
+        elevation={3}
         sx={{
           height: "250px",
           borderRadius: 5,
-          boxShadow: "inset 0 0 0 1px #404756",
           bgcolor: "transparent",
         }}
       >
@@ -29,7 +28,6 @@ const PostsCards = ({ post }) => {
             color="inherit"
             variant="h4"
           >
-            {" "}
             {post.id}
           </Link>
           <Typography sx={{ mb: 2 }} variant="body1" color="text.secondary">

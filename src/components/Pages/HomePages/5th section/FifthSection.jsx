@@ -11,13 +11,13 @@ const FifthSection = () => {
 
   return (
     <StyledSection>
-      <Stack spacing={2} className={classes.root}>
+      <Stack spacing={2} className={classes.root} sx={{px: { xs: 2, sm: 5, md: 10, lg: 25 }}}>
         <Box sx={{ textAlign: "center" }}>
-          <Typography variant="h2" color="inherit">
+          <Typography variant="h2" color="inherit" sx={{fontSize:{xs:25,sm:40,md:50}}}>
             Go full-stack <br />
             with a framework
           </Typography>
-          <Typography sx={{ mt: 5 }} variant="h6" color="inherit">
+          <Typography sx={{ mt: 5 ,fontSize:{xs:18,sm:23}}} variant="h6" color="inherit">
             React is a library. It lets you put components together, but it
             doesn’t prescribe
             <br />
@@ -29,6 +29,7 @@ const FifthSection = () => {
               target="_blank"
               size="large"
               variant="text"
+              sx={{fontSize:{xs:13,sm:19 ,md:22}}}
             >
               Next.js
             </Button>
@@ -38,12 +39,13 @@ const FifthSection = () => {
               target="_blank "
               size="large"
               variant="text"
+              sx={{fontSize:{xs:13,sm:19 ,md:22}}}
             >
               Remix
             </Button>
           </Typography>
 
-          <Typography variant="h6" color="inherit" sx={{ mt: 30 }}>
+          <Typography variant="h6" color="inherit" sx={{ mt: 30,fontSize:{xs:18,sm:23} }}>
             React is also an architecture. Frameworks that implement it let you
             fetch data in
             <br /> asynchronous components that run on the server or even during
