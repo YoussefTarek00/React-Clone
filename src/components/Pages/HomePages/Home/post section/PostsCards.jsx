@@ -5,10 +5,14 @@ import {
   Box,
   Link,
   CardActions,
+  useTheme,
 } from "@mui/material";
 import { PropTypes } from "prop-types";
 
 const PostsCards = ({ post }) => {
+
+const theme = useTheme()
+
   return (
     <Box>
       <Card
@@ -44,7 +48,8 @@ const PostsCards = ({ post }) => {
           </Link>
         </CardContent>
         <CardActions>
-          <Link href="/" underline="hover" sx={{ mt: 5, pl: 1 }}>
+          <Link href="/" underline="hover" sx={{ mt: 5, pl: 1,color:theme.palette.ColorChange.main
+ }}>
             Read More
           </Link>
         </CardActions>

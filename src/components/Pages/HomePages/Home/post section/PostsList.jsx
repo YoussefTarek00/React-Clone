@@ -1,13 +1,7 @@
 import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { fetchData } from "../../../../RTK features/Slices/posts/postSlice";
-import {
-  Box,
-  Grid,
-  Link,
-  Skeleton,
-  Typography,
-} from "@mui/material";
+import { Box, Grid, Link, Skeleton, Typography, useTheme } from "@mui/material";
 import PostsCards from "./PostsCards";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import { StyledSection } from "../../../../Style/AccessThemes";
@@ -15,6 +9,7 @@ import { StyledSection } from "../../../../Style/AccessThemes";
 const PostsList = () => {
   const data = useSelector((state) => state.post);
   const dispatch = useDispatch();
+  const theme = useTheme();
 
   useEffect(() => {
     dispatch(fetchData());
@@ -41,6 +36,7 @@ const PostsList = () => {
             textTransform: "uppercase",
             fontWeight: "700",
             lineHeight: 2,
+            color: theme.palette.ColorChange.main,
           }}
         >
           Blog <ChevronRightIcon />
@@ -59,7 +55,11 @@ const PostsList = () => {
           This blog is the official source for the updates from the React team.
           Anything important, including release notes or deprecation notices,
           will be posted here first. You can also follow the {""}
-          <Link href="https://twitter.com" underline="hover">
+          <Link
+            href="https://twitter.com"
+            underline="hover"
+            sx={{ color: theme.palette.ColorChange.main }}
+          >
             @reactjs
           </Link>{" "}
           account on Twitter, but you won’t miss anything essential if you only

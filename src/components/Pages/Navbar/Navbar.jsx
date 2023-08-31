@@ -27,6 +27,8 @@ import { PropTypes } from "prop-types";
 import {
   Search,
   SearchIconWrapper,
+  SearchIconWrapper2,
+  SearchIconWrapper3,
   StyledAppBar,
   StyledInputBase,
 } from "../../Style/AccessThemes";
@@ -135,6 +137,19 @@ const Navbar = ({ mode, setMyMode }) => {
             <SearchIconWrapper>
               <SearchIcon />
             </SearchIconWrapper>
+            <Box>
+            <SearchIconWrapper2  sx={{
+              display: { xs: "none", sm: "flex" },
+            }}>
+            Ctrl
+            </SearchIconWrapper2>
+            <SearchIconWrapper3 sx={{
+              display: { xs: "none", sm: "flex" },
+            }}>
+              K
+            </SearchIconWrapper3>
+
+            </Box>
             <StyledInputBase
               placeholder="Search"
               inputProps={{ "aria-label": "search" }}
