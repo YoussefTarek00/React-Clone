@@ -10,8 +10,7 @@ import {
 import { PropTypes } from "prop-types";
 
 const PostsCards = ({ post }) => {
-
-const theme = useTheme()
+  const theme = useTheme();
 
   return (
     <Box>
@@ -21,7 +20,7 @@ const theme = useTheme()
         sx={{
           height: "250px",
           borderRadius: 5,
-          bgcolor: "transparent",
+          backgroundColor: "transparent",
         }}
       >
         <CardContent>
@@ -48,8 +47,11 @@ const theme = useTheme()
           </Link>
         </CardContent>
         <CardActions>
-          <Link href="/" underline="hover" sx={{ mt: 5, pl: 1,color:theme.palette.ColorChange.main
- }}>
+          <Link
+            href="/"
+            underline="hover"
+            sx={{ mt: 5, pl: 1, color: theme.palette.ColorChange.main }}
+          >
             Read More
           </Link>
         </CardActions>

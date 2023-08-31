@@ -82,6 +82,9 @@ export const StyledAppBar = styled(AppBar)(({ theme }) => ({
 export const StyledSection = styled("div")(({ theme }) => ({
   background: theme.palette.bgColors.main,
 }));
+export const StyledSecondSection = styled("div")(({ theme }) => ({
+  backgroundImage: theme.palette.SecondSectionBg.main,
+}));
 
 export const UkSection = styled("div")(({ theme }) => ({
   background: theme.palette.UKbgColors.main,

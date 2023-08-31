@@ -7,7 +7,9 @@ const getDesignTokens = (mode) => ({
           bgColors: {
             main: "#fff",
           },
-
+SecondSectionBg:{
+main : "conic-gradient(from 90deg at -10% 100%,#bcc1cd 0deg,#bcc1cd 90deg,#fff 1turn)"
+},
           UKbgColors: {
             main: "#eee",
           },
@@ -35,6 +37,9 @@ const getDesignTokens = (mode) => ({
           bgColors: {
             main: "#23272f",
           },
+          SecondSectionBg:{
+            main : "conic-gradient(from 90deg at -10% 100%,#2b303b 0deg,#2b303b 90deg,#16181d 1turn)"
+            },
           UKbgColors: {
             main: "#374151",
           },
@@ -45,7 +50,7 @@ const getDesignTokens = (mode) => ({
             main: "rgb(153 161 179)",
           },
           backGroundChange: {
-            main: "rgba(88,175,223,.1)",
+            main: "rgb(230 247 255)",
           },
           backGroundLetters: {
             main: "#23272f",

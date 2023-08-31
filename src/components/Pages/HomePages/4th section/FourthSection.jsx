@@ -3,12 +3,14 @@ import { useNavigate } from "react-router-dom";
 import CustomButton from "../../Button component/CustomButton";
 import CodeOffIcon from "@mui/icons-material/CodeOff";
 import { useStyles } from "../../page setup/PageSetupStyle";
+import { StyledSecondSection } from "../../../Style/AccessThemes";
 
 const FourthSection = () => {
   const navigate = useNavigate();
   const classes = useStyles();
 
   return (
+    <StyledSecondSection>
     <Stack spacing={2} className={classes.root} sx={{px: { xs: 2, sm: 5, md: 10, lg: 25 }}}>
       <Box sx={{ textAlign: "center" }}>
         <Typography variant="h2" color="inherit" sx={{fontSize:{xs:25,sm:40,md:50}}}>
@@ -37,6 +39,7 @@ const FourthSection = () => {
         />
       </Box>
     </Stack>
+    </StyledSecondSection>
   );
 };
 

@@ -71,14 +71,19 @@ const SevenSection = () => {
                     height: "160px",
                   }}
                 >
-                  <Link href="#" underline="hover" color="inherit">
+                  <Link
+                    href="#"
+                    underline="hover"
+                    color="inherit"
+                    sx={{ fontSize: { xs: 15, sm: 20, md: 20, lg: 20 } }}
+                  >
                     React Canaries: Incremental Feature Rollout
                   </Link>
                   <Box
                     sx={{
                       p: 1,
                       fontSize: 15,
-                      mt: { xs: 2, sm: 7, md: 3, lg: 0 },
+                      mt: { xs: 3.5, sm: 7, md: 3, lg: 0 },
                     }}
                   >
                     <Typography
@@ -102,7 +107,12 @@ const SevenSection = () => {
                     height: "160px",
                   }}
                 >
-                  <Link href="#" underline="hover" color="inherit">
+                  <Link
+                    href="#"
+                    underline="hover"
+                    color="inherit"
+                    sx={{ fontSize: { xs: 15, sm: 20, md: 20, lg: 20 } }}
+                  >
                     React Labs: March 2023
                   </Link>
                   <Box
@@ -133,7 +143,12 @@ const SevenSection = () => {
                     height: "160px",
                   }}
                 >
-                  <Link href="#" underline="hover" color="inherit">
+                  <Link
+                    href="#"
+                    underline="hover"
+                    color="inherit"
+                    sx={{ fontSize: { xs: 15, sm: 20, md: 20, lg: 20 } }}
+                  >
                     Introducing react.dev
                   </Link>
                   <Box
@@ -164,7 +179,12 @@ const SevenSection = () => {
                     height: "160px",
                   }}
                 >
-                  <Link href="#" underline="hover" color="inherit">
+                  <Link
+                    href="#"
+                    underline="hover"
+                    color="inherit"
+                    sx={{ fontSize: { xs: 15, sm: 20, md: 20, lg: 20 } }}
+                  >
                     React Labs: June 2022
                   </Link>
                   <Box

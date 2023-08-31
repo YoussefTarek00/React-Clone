@@ -3,12 +3,13 @@ import ReactLogo from "../../../../../Images/logo192.png";
 import Footer from "./Footer";
 import GetStartedButton from "../../Button component/GetStartedButton";
 import { useStyles } from "../../page setup/PageSetupStyle";
+import { StyledSecondSection } from "../../../Style/AccessThemes";
 
 const LastSection = () => {
   const classes = useStyles();
 
   return (
-    <>
+    <StyledSecondSection>
       <Stack
         spacing={2}
         className={classes.root}
@@ -66,12 +67,11 @@ const LastSection = () => {
               Welcome to the <br /> React community
             </Typography>
           </Box>
-
           <GetStartedButton text="Get Started" />
         </Box>
       </Stack>
       <Footer />
-    </>
+    </StyledSecondSection>
   );
 };
 
