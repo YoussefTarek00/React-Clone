@@ -31,11 +31,9 @@ const SixSection = () => {
             color="inherit"
           >
             People love web and native apps for different reasons. React lets
-            you build both <br />
-            web apps and native apps using the same skills. It leans upon each
-            platform’s <br />
-            unique strengths to let your interfaces feel just right on every
-            platform.
+            you build both web apps and native apps using the same skills. It
+            leans upon each platform’s unique strengths to let your interfaces
+            feel just right on every platform.
           </Typography>
           <Typography
             variant="h6"
@@ -43,11 +41,9 @@ const SixSection = () => {
             sx={{ mt: 30, fontSize: { xs: 18, sm: 23 } }}
           >
             With React, you can be a web and a native developer. Your team can
-            ship to many
-            <br /> platforms without sacrificing the user experience. Your
-            organization can bridge <br />
-            the platform silos, and form teams that own entire features
-            end-to-end.
+            ship to many platforms without sacrificing the user experience. Your
+            organization can bridge the platform silos, and form teams that own
+            entire features end-to-end.
           </Typography>
           <CustomButton
             icon={<DevicesIcon />}

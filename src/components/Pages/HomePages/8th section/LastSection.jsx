@@ -31,9 +31,8 @@ const LastSection = () => {
             color="inherit"
           >
             You’re not alone. Two million developers from all over the world
-            visit the React <br />
-            docs every month. React is something that people and teams can agree
-            on. <br />
+            visit the React docs every month. React is something that people and
+            teams can agree on.
           </Typography>
 
           <Typography
@@ -42,15 +41,11 @@ const LastSection = () => {
             sx={{ mt: 30, fontSize: { xs: 18, sm: 23 } }}
           >
             This is why React is more than a library, an architecture, or even
-            an ecosystem.
-            <br /> React is a community. It’s a place where you can ask for
-            help, find opportunities, <br />
-            and meet new friends. You will meet both developers and designers,
-            beginners <br />
-            and experts, researchers and artists, teachers and students. Our
-            backgrounds <br />
-            may be very different, but React lets us all create user interfaces
-            together.
+            an ecosystem. React is a community. It’s a place where you can ask
+            for help, find opportunities, and meet new friends. You will meet
+            both developers and designers, beginners and experts, researchers
+            and artists, teachers and students. Our backgrounds may be very
+            different, but React lets us all create user interfaces together.
           </Typography>
 
           <Box sx={{ textAlign: "center", mt: 20 }}>

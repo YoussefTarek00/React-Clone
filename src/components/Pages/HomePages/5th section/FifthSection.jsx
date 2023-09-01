@@ -32,17 +32,14 @@ const FifthSection = () => {
             color="inherit"
           >
             React is a library. It lets you put components together, but it
-            doesn’t prescribe
-            <br />
-            how to do routing and data fetching. To build an entire app with
-            React, we <br />
-            recommend a full-stack React framework like
+            doesn’t prescribe how to do routing and data fetching. To build an
+            entire app with React, we recommend a full-stack React framework
+            like
             <Link
               href="https://nextjs.org/"
               target="_blank"
               underline="hover"
               sx={{
-                fontSize: { xs: 13, sm: 19, md: 22 },
                 m: 1,
                 color: theme.palette.ColorChange.main,
               }}
@@ -55,7 +52,6 @@ const FifthSection = () => {
               target="_blank "
               underline="hover"
               sx={{
-                fontSize: { xs: 13, sm: 19, md: 22 },
                 m: 1,
                 color: theme.palette.ColorChange.main,
               }}
@@ -70,11 +66,9 @@ const FifthSection = () => {
             sx={{ mt: 30, fontSize: { xs: 18, sm: 23 } }}
           >
             React is also an architecture. Frameworks that implement it let you
-            fetch data in
-            <br /> asynchronous components that run on the server or even during
-            the build. Read <br />
-            data from a file or a database, and pass it down to your interactive
-            components
+            fetch data in asynchronous components that run on the server or even
+            during the build. Read data from a file or a database, and pass it
+            down to your interactive components
           </Typography>
           <CustomButton
             icon={<WorkspacesIcon />}

@@ -12,15 +12,17 @@ import metaLogo from "../../../../../Images/meta-removebg-preview.png";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import GitHubIcon from "@mui/icons-material/GitHub";
+import { StyledSecondSection } from "../../../Style/AccessThemes";
 
 const Footer = () => {
   return (
-    <Container>
+    <StyledSecondSection>
+      <Container>
       <Grid
         container
         spacing={1}
         justifyContent="space-between"
-        sx={{ mt: 20, height: "300px" }}
+        sx={{ mt: 20, height: "100vh" }}
       >
         <Grid item xs={6} sm={6} md={4} lg={2}>
           <Link
@@ -173,7 +175,8 @@ const Footer = () => {
           </Box>
         </Grid>
       </Grid>
-    </Container>
+      </Container>
+    </StyledSecondSection>
   );
 };
 

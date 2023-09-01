@@ -26,25 +26,32 @@ const SevenSection = () => {
               future is ready
             </Typography>
             <Typography
-              sx={{ mt: 5, fontSize: { xs: 16, sm: 19, md: 22 } }}
+              sx={{
+                mt: 5,
+                pr: { sm: 0, md: 0, lg: 2 },
+                fontSize: { xs: 16, sm: 19, md: 22 },
+              }}
               variant="h6"
               color="inherit"
             >
-              React approaches changes with care. Every React <br />
-              commit is tested on business-critical surfaces with
-              <br /> over a billion users. Over 100,000 React components <br />
-              at Meta help validate every migration strategy.
+              React approaches changes with care. Every React commit is tested
+              on business-critical surfaces with over a billion users. Over
+              100,000 React components at Meta help validate every migration
+              strategy.
             </Typography>
             <Typography
-              sx={{ mt: 3, fontSize: { xs: 16, sm: 19, md: 22 } }}
+              sx={{
+                mt: 3,
+                pr: { sm: 0, md: 0, lg: 4 },
+                fontSize: { xs: 16, sm: 19, md: 22 },
+              }}
               variant="h6"
               color="inherit"
             >
-              The React team is always researching how to improve <br />
-              React. Some research takes years to pay off. React has
-              <br /> a high bar for taking a research idea into production.
-              <br /> Only proven approaches become a part of React.
-              <br />
+              The React team is always researching how to improve React. Some
+              research takes years to pay off. React has a high bar for taking a
+              research idea into production. Only proven approaches become a
+              part of React.
             </Typography>
             <CustomButton
               icon={<DevicesIcon />}
