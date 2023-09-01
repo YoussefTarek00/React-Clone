@@ -18,7 +18,7 @@ const PostsCards = ({ post }) => {
         href="/"
         elevation={3}
         sx={{
-          height: "250px",
+          height:{xs:'370px',sm:"270px",md:"270px",lg:"270px"} ,
           borderRadius: 5,
           backgroundColor: "transparent",
         }}
@@ -50,7 +50,7 @@ const PostsCards = ({ post }) => {
           <Link
             href="/"
             underline="hover"
-            sx={{ mt: 5, pl: 1, color: theme.palette.ColorChange.main }}
+            sx={{ mt:{xs:3,sm:3,md:5,lg:5} , pl: 1, color: theme.palette.ColorChange.main }}
           >
             Read More
           </Link>
