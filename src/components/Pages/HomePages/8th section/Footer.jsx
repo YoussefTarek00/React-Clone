@@ -140,7 +140,7 @@ const Footer = () => {
             </Link>
           </Stack>
 
-          <Box sx={{ mt: 5, display: "flex" }}>
+          <Box sx={{ mt: 5, display: "flex" ,mb:5}}>
             <Link
               color="inherit"
               href="#"
