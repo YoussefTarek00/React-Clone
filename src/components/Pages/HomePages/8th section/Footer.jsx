@@ -16,13 +16,13 @@ import { StyledSecondSection } from "../../../Style/AccessThemes";
 
 const Footer = () => {
   return (
-    <StyledSecondSection>
+    <StyledSecondSection height= "100vh" >
       <Container>
       <Grid
         container
         spacing={1}
         justifyContent="space-between"
-        sx={{ mt: 20, height: "100vh" }}
+        sx={{ mt: 20}}
       >
         <Grid item xs={6} sm={6} md={4} lg={2}>
           <Link

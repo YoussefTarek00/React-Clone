@@ -24,7 +24,7 @@ const Landing = () => {
           justifyContent: "center",
           alignItems: "center",
           pb: "7px",
-          height: 750,
+          height: {xs:800 ,sm:700},
         }}
       >
         <Avatar
