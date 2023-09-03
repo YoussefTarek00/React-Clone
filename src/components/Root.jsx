@@ -2,7 +2,7 @@ import { Outlet } from "react-router-dom";
 import Navbar from "./Pages/Navbar/Navbar";
 import { Box, CssBaseline, ThemeProvider, createTheme } from "@mui/material";
 import { useMemo, useState } from "react";
-import getDesignTokens from "./Style/MyThemes";
+import getDesignTokens from "./Style/LightAndDarkTheme";
 
 const Root = () => {
   const [mode, setMyMode] = useState(
