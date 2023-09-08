@@ -90,7 +90,7 @@ const SevenSection = () => {
                     sx={{
                       p: 1,
                       fontSize: 15,
-                      mt: { xs: 3.5, sm: 7, md: 3, lg: 0 },
+                      mt: { xs: 5.5, sm: 7, md: 3, lg: 0 },
                     }}
                   >
                     <Typography
