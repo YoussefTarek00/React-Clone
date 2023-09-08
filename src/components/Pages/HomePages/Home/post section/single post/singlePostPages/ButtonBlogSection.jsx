@@ -1,9 +1,11 @@
 import { Box, Button, Link, useTheme } from "@mui/material";
 import KeyboardArrowLeftIcon from "@mui/icons-material/KeyboardArrowLeft";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
+import { useNavigate } from "react-router-dom";
 
 const ButtonBlogSection = () => {
   const theme = useTheme();
+  const navigate = useNavigate();
 
   return (
     <Box
@@ -31,9 +33,11 @@ const ButtonBlogSection = () => {
         }
         variant="text"
         color="inherit"
+        onClick={() => {
+          navigate("/blog");
+        }}
       >
         <Link
-          href="/blog"
           underline="none"
           color="inherit"
           sx={{ textTransform: "uppercase", fontSize: 13 }}
@@ -41,7 +45,6 @@ const ButtonBlogSection = () => {
           previous
         </Link>
         <Link
-          href="/blog"
           sx={{ color: theme.palette.ColorChange.main, fontSize: 17 }}
           underline="hover"
         >
@@ -66,9 +69,11 @@ const ButtonBlogSection = () => {
           mt: 5,
           width: { xs: "10rem", sm: "20rem" },
         }}
+        onClick={() => {
+          navigate("#");
+        }}
       >
         <Link
-          href="#"
           underline="none"
           color="inherit"
           sx={{ textTransform: "uppercase", fontSize: 13 }}
@@ -76,7 +81,6 @@ const ButtonBlogSection = () => {
           next
         </Link>
         <Link
-          href="#"
           sx={{
             color: theme.palette.ColorChange.main,
             fontSize: 17,

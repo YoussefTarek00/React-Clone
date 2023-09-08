@@ -7,9 +7,15 @@ import {
   Link,
   useTheme,
 } from "@mui/material";
+import { useNavigate } from "react-router-dom";
 
 const PostsCards = ({ post }) => {
   const theme = useTheme();
+  const navigate = useNavigate();
+
+  const handleNavigate = () => {
+    navigate(`${post.id}`);
+  };
 
   return (
     <Box>
@@ -19,34 +25,23 @@ const PostsCards = ({ post }) => {
           height: { xs: "370px", sm: "270px", md: "270px", lg: "270px" },
           borderRadius: 5,
           backgroundColor: "transparent",
+          cursor: "pointer",
         }}
+        onClick={handleNavigate}
       >
         <CardContent>
-          <Link
-            sx={{ mb: 1.5 }}
-            href={`blog/${post.id}`}
-            underline="hover"
-            color="inherit"
-            variant="h4"
-          >
+          <Link sx={{ mb: 1.5 }} underline="hover" color="inherit" variant="h4">
             {post.id}
           </Link>
           <Typography sx={{ mb: 2 }} variant="body1" color="text.secondary">
             {post.title}
           </Typography>
-          <Link
-            sx={{ mb: 1.5 }}
-            href={`/blog/${post.id}`}
-            underline="none"
-            color="inherit"
-            variant="p"
-          >
+          <Link sx={{ mb: 1.5 }} underline="none" color="inherit" variant="p">
             Description: {post.body}
           </Link>
         </CardContent>
         <CardActions>
           <Link
-            href={`blog/${post.id}`}
             underline="hover"
             sx={{
               mt: { xs: 3, sm: 3, md: 5, lg: 5 },

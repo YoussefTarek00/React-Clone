@@ -39,8 +39,8 @@ const SinglePost = () => {
         <Skeleton
           variant="rectangular"
           animation="wave"
-          width={650}
-          height={250}
+          width={850}
+          height={550}
         />
       </Typography>
     );
