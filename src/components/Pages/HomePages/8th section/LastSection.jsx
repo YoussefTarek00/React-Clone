@@ -1,6 +1,5 @@
 import { Avatar, Box, Stack, Typography } from "@mui/material";
 import ReactLogo from "../../../../../Images/logo192.png";
-import Footer from "./Footer";
 import GetStartedButton from "../../Button component/GetStartedButton";
 import { useStyles } from "../../page setup/PageSetupStyle";
 import { StyledSecondSection } from "../../../Style/AccessThemes";
@@ -65,7 +64,6 @@ const LastSection = () => {
           <GetStartedButton text="Get Started" />
         </Box>
       </Stack>
-      <Footer />
     </StyledSecondSection>
   );
 };

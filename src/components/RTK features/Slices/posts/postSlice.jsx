@@ -7,11 +7,12 @@ const initialState = {
   error: "",
 };
 
-export const fetchData = createAsyncThunk("post/fetchData", () => {
-  return axios
-    .get("https://jsonplaceholder.typicode.com/posts")
-    .then((res) => res.data);
+export const fetchData = createAsyncThunk("post/fetchData", async () => {
+  const res = await axios.get("https://jsonplaceholder.typicode.com/posts");
+  return res.data;
 });
+
+
 
 const postSlice = createSlice({
   name: "post",

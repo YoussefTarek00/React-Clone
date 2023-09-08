@@ -7,9 +7,9 @@ const getDesignTokens = (mode) => ({
           bgColors: {
             main: "#fff",
           },
-SecondSectionBg:{
-main : "conic-gradient(from 90deg at -10% 100%,#bcc1cd 0deg,#bcc1cd 90deg,#fff 1turn)"
-},
+          SecondSectionBg: {
+            main: "conic-gradient(from 90deg at -10% 100%,#bcc1cd 0deg,#bcc1cd 90deg,#fff 1turn)",
+          },
           UKbgColors: {
             main: "#eee",
           },
@@ -25,6 +25,12 @@ main : "conic-gradient(from 90deg at -10% 100%,#bcc1cd 0deg,#bcc1cd 90deg,#fff 1
           backGroundLetters: {
             main: "rgb(255 255 255)",
           },
+           BlogCardBg: {
+            main: "rgb(244,251,249, 1)",
+          },
+          BlogCardColor: {
+            main: "#2B6E62",
+          },
           ColorChange: {
             main: "rgb(8 126 164)",
           },
@@ -37,9 +43,9 @@ main : "conic-gradient(from 90deg at -10% 100%,#bcc1cd 0deg,#bcc1cd 90deg,#fff 1
           bgColors: {
             main: "#23272f",
           },
-          SecondSectionBg:{
-            main : "conic-gradient(from 90deg at -10% 100%,#2b303b 0deg,#2b303b 90deg,#16181d 1turn)"
-            },
+          SecondSectionBg: {
+            main: "conic-gradient(from 90deg at -10% 100%,#2b303b 0deg,#2b303b 90deg,#16181d 1turn)",
+          },
           UKbgColors: {
             main: "#374151",
           },
@@ -54,6 +60,12 @@ main : "conic-gradient(from 90deg at -10% 100%,#bcc1cd 0deg,#bcc1cd 90deg,#fff 1
           },
           backGroundLetters: {
             main: "#23272f",
+          },
+          BlogCardBg: {
+            main: "rgb(43,110,98,0.2)",
+          },
+          BlogCardColor: {
+            main: "#44AC99",
           },
           ColorChange: {
             main: "rgb(20 158 202)",

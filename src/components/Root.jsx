@@ -3,7 +3,8 @@ import Navbar from "./Pages/Navbar/Navbar";
 import { Box, CssBaseline, ThemeProvider, createTheme } from "@mui/material";
 import { useMemo, useState } from "react";
 import getDesignTokens from "./Style/LightAndDarkTheme";
-
+import Footer from "./Pages/HomePages/8th section/Footer";
+import { StyledSecondSection, StyledSection } from "./Style/AccessThemes";
 const Root = () => {
   const [mode, setMyMode] = useState(
     localStorage.getItem("currentMode") === null
@@ -20,7 +21,10 @@ const Root = () => {
       <CssBaseline />
       <Box>
         <Navbar mode={mode} setMyMode={setMyMode} />
-        <Outlet />
+        <StyledSecondSection>
+          <Outlet />
+          <Footer />
+        </StyledSecondSection>
       </Box>
     </ThemeProvider>
   );

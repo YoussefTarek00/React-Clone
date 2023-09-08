@@ -3,11 +3,10 @@ import {
   Card,
   CardContent,
   Box,
-  Link,
   CardActions,
+  Link,
   useTheme,
 } from "@mui/material";
-import { PropTypes } from "prop-types";
 
 const PostsCards = ({ post }) => {
   const theme = useTheme();
@@ -15,10 +14,9 @@ const PostsCards = ({ post }) => {
   return (
     <Box>
       <Card
-        href="/"
         elevation={3}
         sx={{
-          height:{xs:'370px',sm:"270px",md:"270px",lg:"270px"} ,
+          height: { xs: "370px", sm: "270px", md: "270px", lg: "270px" },
           borderRadius: 5,
           backgroundColor: "transparent",
         }}
@@ -26,7 +24,7 @@ const PostsCards = ({ post }) => {
         <CardContent>
           <Link
             sx={{ mb: 1.5 }}
-            href="/"
+            href={`blog/${post.id}`}
             underline="hover"
             color="inherit"
             variant="h4"
@@ -38,7 +36,7 @@ const PostsCards = ({ post }) => {
           </Typography>
           <Link
             sx={{ mb: 1.5 }}
-            href="/"
+            href={`/blog/${post.id}`}
             underline="none"
             color="inherit"
             variant="p"
@@ -48,9 +46,13 @@ const PostsCards = ({ post }) => {
         </CardContent>
         <CardActions>
           <Link
-            href="/"
+            href={`blog/${post.id}`}
             underline="hover"
-            sx={{ mt:{xs:3,sm:3,md:5,lg:5} , pl: 1, color: theme.palette.ColorChange.main }}
+            sx={{
+              mt: { xs: 3, sm: 3, md: 5, lg: 5 },
+              pl: 1,
+              color: theme.palette.ColorChange.main,
+            }}
           >
             Read More
           </Link>
@@ -60,7 +62,4 @@ const PostsCards = ({ post }) => {
   );
 };
 
-PostsCards.propTypes = {
-  post: PropTypes.any.isRequired,
-};
 export default PostsCards;

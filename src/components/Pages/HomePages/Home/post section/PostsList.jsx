@@ -3,8 +3,8 @@ import { useSelector, useDispatch } from "react-redux";
 import { fetchData } from "../../../../RTK features/Slices/posts/postSlice";
 import { Box, Grid, Link, Skeleton, Typography, useTheme } from "@mui/material";
 import PostsCards from "./PostsCards";
-import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import { StyledSection } from "../../../../Style/AccessThemes";
+import BlogIcon from "../../../Text component/BlogIcon";
 
 const PostsList = () => {
   const data = useSelector((state) => state.post);
@@ -25,22 +25,7 @@ const PostsList = () => {
       }}
     >
       <Box sx={{ mt: 15 }}>
-        <Link
-          href="/blog"
-          underline="hover"
-          sx={{
-            display: "flex",
-            width: 10,
-            mb: 4,
-            fontSize: 13,
-            textTransform: "uppercase",
-            fontWeight: "700",
-            lineHeight: 2,
-            color: theme.palette.ColorChange.main,
-          }}
-        >
-          Blog <ChevronRightIcon />
-        </Link>
+        <BlogIcon text="Blog" />
 
         <Typography
           variant="h4"
@@ -81,7 +66,7 @@ const PostsList = () => {
           Error: {data.error}
         </Typography>
       ) : null}
-      {!data.loading && data.data.length ? (
+      {!data.loading && data.data ? (
         <Grid container spacing={2}>
           {data.data.map((post) => (
             <Grid item key={post.id} xs={12} md={12} lg={12}>
