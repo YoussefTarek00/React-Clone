@@ -4,13 +4,14 @@ import WorkspacesIcon from "@mui/icons-material/Workspaces";
 import { useNavigate } from "react-router-dom";
 import CustomButton from "../../../components/Button component/CustomButton";
 import { useStyles } from "../../page setup/PageSetupStyle";
-import H6Typography from "../../../components/Text component/Home section/H6Typography";
+import H6Typography, { H6TypographyStyles } from "../../../components/Text component/Home section/H6Typography";
 import H2Typography from "../../../components/Text component/Home section/H2Typography";
 
 const FifthSection = () => {
   const navigate = useNavigate();
   const theme = useTheme();
   const classes = useStyles();
+  const MtFont = H6TypographyStyles();
 
   return (
     <StyledSection>
@@ -25,7 +26,7 @@ const FifthSection = () => {
           <H2Typography text="with a framework" />
 
           <Typography
-            sx={{ mt: 5, fontSize: { xs: 18, sm: 23 } }}
+           className={MtFont.root}
             variant="h6"
             color="inherit"
           >

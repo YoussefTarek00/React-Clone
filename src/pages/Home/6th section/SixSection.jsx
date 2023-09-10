@@ -4,12 +4,13 @@ import CustomButton from "../../../components/Button component/CustomButton";
 import { useNavigate } from "react-router-dom";
 import { useStyles } from "../../page setup/PageSetupStyle";
 import { StyledSecondSection } from "../../../components/Style/AccessThemes";
-import H6Typography from "../../../components/Text component/Home section/H6Typography";
+import H6Typography, { H6TypographyStyles } from "../../../components/Text component/Home section/H6Typography";
 import H2Typography from "../../../components/Text component/Home section/H2Typography";
 
 const SixSection = () => {
   const navigate = useNavigate();
   const classes = useStyles();
+  const MtFont = H6TypographyStyles();
 
   return (
     <StyledSecondSection>
@@ -24,7 +25,7 @@ const SixSection = () => {
           <H2Typography text="every platform" />
 
           <Typography
-            sx={{ mt: 5, fontSize: { xs: 18, sm: 23 } }}
+            className={MtFont.root}
             variant="h6"
             color="inherit"
           >

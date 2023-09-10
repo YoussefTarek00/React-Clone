@@ -2,11 +2,12 @@ import { Box, Stack, Typography } from "@mui/material";
 import { StyledSection } from "../../../components/Style/AccessThemes";
 import BgTypography from "../../../components/Text component/BgTypography";
 import { useStyles } from "../../page setup/PageSetupStyle";
-import H6Typography from "../../../components/Text component/Home section/H6Typography";
+import H6Typography, { H6TypographyStyles } from "../../../components/Text component/Home section/H6Typography";
 import H2Typography from "../../../components/Text component/Home section/H2Typography";
 
 const ThirdSection = () => {
   const classes = useStyles();
+  const MtFont = H6TypographyStyles();
 
   return (
     <StyledSection>
@@ -20,11 +21,7 @@ const ThirdSection = () => {
           <br />
           <H2Typography text="with code and markup" />
 
-          <Typography
-            sx={{ mt: 5, fontSize: { xs: 17, sm: 23 } }}
-            variant="h6"
-            color="inherit"
-          >
+          <Typography className={MtFont.root} variant="h6" color="inherit">
             React components are JavaScript functions. Want to show some content
             conditionally? Use an <BgTypography variant="span" text="if" />{" "}
             statement. Displaying a list? Try array{" "}

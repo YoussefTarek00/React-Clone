@@ -1,24 +1,27 @@
+
+
+
 import { Typography } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 
-export const H6TypographyStyles = makeStyles({
+const useStyles = makeStyles({
   root: {
-    marginTop: 5,
-    fontSize: 22
+    
   },
 });
 
-function H6Typography(props) {
+function MarginBotTypo(props) {
+  const classes = useStyles();
 
   return (
     <Typography
-      variant="h6"
+      variant="body1"
       className={classes.root}
-      sx={{mt:30, fontSize: { xs: 18, sm: 23 } }}
+      sx={{  mb: 3 }}
     >
       {props.text}
     </Typography>
   );
 }
 
-export default H6Typography;
+export default MarginBotTypo;

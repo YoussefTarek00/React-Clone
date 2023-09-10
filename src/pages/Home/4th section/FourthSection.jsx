@@ -4,12 +4,15 @@ import CustomButton from "../../../components/Button component/CustomButton";
 import CodeOffIcon from "@mui/icons-material/CodeOff";
 import { useStyles } from "../../page setup/PageSetupStyle";
 import { StyledSecondSection } from "../../../components/Style/AccessThemes";
-import H6Typography from "../../../components/Text component/Home section/H6Typography";
+import H6Typography, {
+  H6TypographyStyles,
+} from "../../../components/Text component/Home section/H6Typography";
 import H2Typography from "../../../components/Text component/Home section/H2Typography";
 
 const FourthSection = () => {
   const navigate = useNavigate();
   const classes = useStyles();
+  const MtFont = H6TypographyStyles();
 
   return (
     <StyledSecondSection>
@@ -20,12 +23,9 @@ const FourthSection = () => {
       >
         <Box>
           <H2Typography text="Add interactivity" />
-          <br /> <H2Typography text="wherever you need it" />
-          <Typography
-            sx={{ mt: 5, fontSize: { xs: 18, sm: 23 } }}
-            variant="h6"
-            color="inherit"
-          >
+          <br /> 
+          <H2Typography text="wherever you need it" />
+          <Typography className={MtFont.root} variant="h6" color="inherit">
             React components receive data and return what should appear on the
             screen. You can pass them new data in response to an interaction,
             like when the user types into an input. React will then update the
