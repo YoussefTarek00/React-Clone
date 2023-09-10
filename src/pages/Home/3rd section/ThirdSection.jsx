@@ -2,6 +2,7 @@ import { Box, Stack, Typography } from "@mui/material";
 import { StyledSection } from "../../../components/Style/AccessThemes";
 import BgTypography from "../../../components/Text component/BgTypography";
 import { useStyles } from "../../page setup/PageSetupStyle";
+import H6Typography from "../../../components/Text component/Home section/H6Typography";
 
 const ThirdSection = () => {
   const classes = useStyles();
@@ -34,16 +35,12 @@ const ThirdSection = () => {
             learning programming.
           </Typography>
 
-          <Typography
-            variant="h6"
-            color="inherit"
-            sx={{ mt: 30, fontSize: { xs: 18, sm: 23 } }}
-          >
-            This markup syntax is called JSX. It is a JavaScript syntax
+          <H6Typography
+            text="This markup syntax is called JSX. It is a JavaScript syntax
             extension popularized by React. Putting JSX markup close to related
             rendering logic makes React components easy to create, maintain, and
-            delete.
-          </Typography>
+            delete."
+          />
         </Box>
       </Stack>
     </StyledSection>

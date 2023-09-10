@@ -4,6 +4,7 @@ import CustomButton from "../../../components/Button component/CustomButton";
 import { useNavigate } from "react-router-dom";
 import { useStyles } from "../../page setup/PageSetupStyle";
 import { StyledSecondSection } from "../../../components/Style/AccessThemes";
+import H6Typography from "../../../components/Text component/Home section/H6Typography";
 
 const SixSection = () => {
   const navigate = useNavigate();
@@ -35,16 +36,12 @@ const SixSection = () => {
             leans upon each platform’s unique strengths to let your interfaces
             feel just right on every platform.
           </Typography>
-          <Typography
-            variant="h6"
-            color="inherit"
-            sx={{ mt: 30, fontSize: { xs: 18, sm: 23 } }}
-          >
-            With React, you can be a web and a native developer. Your team can
+          <H6Typography text ="With React, you can be a web and a native developer. Your team can
             ship to many platforms without sacrificing the user experience. Your
             organization can bridge the platform silos, and form teams that own
-            entire features end-to-end.
-          </Typography>
+            entire features end-to-end."
+          />
+            
           <CustomButton
             icon={<DevicesIcon />}
             ButtonText="Build for native platforms"

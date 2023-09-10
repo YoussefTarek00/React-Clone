@@ -4,6 +4,7 @@ import CustomButton from "../../../components/Button component/CustomButton";
 import CodeOffIcon from "@mui/icons-material/CodeOff";
 import { useStyles } from "../../page setup/PageSetupStyle";
 import { StyledSecondSection } from "../../../components/Style/AccessThemes";
+import H6Typography from "../../../components/Text component/Home section/H6Typography";
 
 const FourthSection = () => {
   const navigate = useNavigate();
@@ -34,15 +35,12 @@ const FourthSection = () => {
             like when the user types into an input. React will then update the
             screen to match the new data.
           </Typography>
-          <Typography
-            variant="h6"
-            color="inherit"
-            sx={{ mt: 30, fontSize: { xs: 18, sm: 23 } }}
-          >
-            You don’t have to build your whole page in React. Add React to your
+
+          <H6Typography
+            text="You don’t have to build your whole page in React. Add React to your
             existing HTML page, and render interactive React components anywhere
-            on it.
-          </Typography>
+            on it."
+          />
 
           <CustomButton
             icon={<CodeOffIcon />}

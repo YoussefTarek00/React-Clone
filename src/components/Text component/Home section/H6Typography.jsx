@@ -3,7 +3,7 @@ import { makeStyles } from "@mui/styles";
 
 const useStyles = makeStyles({
   root: {
-    marginTop: 30,
+    
   },
 });
 
@@ -14,7 +14,7 @@ function H6Typography(props) {
     <Typography
       variant="h6"
       className={classes.root}
-      sx={{ fontSize: { xs: 18, sm: 23 } }}
+      sx={{mt:30, fontSize: { xs: 18, sm: 23 } }}
     >
       {props.text}
     </Typography>

@@ -2,6 +2,7 @@ import { Stack, Typography, Box, Button, ThemeProvider } from "@mui/material";
 import BgTypography from "../../../components/Text component/BgTypography";
 import { useStyles } from "../../page setup/PageSetupStyle";
 import { StyledSecondSection } from "../../../components/Style/AccessThemes";
+import H6Typography from "../../../components/Text component/Home section/H6Typography";
 
 const SecondSection = () => {
   const classes = useStyles();
@@ -35,7 +36,7 @@ const SecondSection = () => {
             screens, pages, and apps.
           </Typography>
 
-          <H6Typography
+          <H6Typography 
             text=" Whether you work on your own or with thousands of other developers,
             using React feels the same. It is designed to let you seamlessly
             combine components written by independent people, teams, and

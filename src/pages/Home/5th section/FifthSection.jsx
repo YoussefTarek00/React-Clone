@@ -4,6 +4,7 @@ import WorkspacesIcon from "@mui/icons-material/Workspaces";
 import { useNavigate } from "react-router-dom";
 import CustomButton from "../../../components/Button component/CustomButton";
 import { useStyles } from "../../page setup/PageSetupStyle";
+import H6Typography from "../../../components/Text component/Home section/H6Typography";
 
 const FifthSection = () => {
   const navigate = useNavigate();
@@ -60,16 +61,12 @@ const FifthSection = () => {
             </Link>
           </Typography>
 
-          <Typography
-            variant="h6"
-            color="inherit"
-            sx={{ mt: 30, fontSize: { xs: 18, sm: 23 } }}
-          >
-            React is also an architecture. Frameworks that implement it let you
+          <H6Typography text="React is also an architecture. Frameworks that implement it let you
             fetch data in asynchronous components that run on the server or even
             during the build. Read data from a file or a database, and pass it
-            down to your interactive components
-          </Typography>
+            down to your interactive components"
+          />
+            
           <CustomButton
             icon={<WorkspacesIcon />}
             ButtonText="Get started with a framework"

@@ -3,6 +3,7 @@ import ReactLogo from "../../../../Images/logo192.png";
 import GetStartedButton from "../../../components/Button component/GetStartedButton";
 import { useStyles } from "../../page setup/PageSetupStyle";
 import { StyledSecondSection } from "../../../components/Style/AccessThemes";
+import H6Typography from "../../../components/Text component/Home section/H6Typography";
 
 const LastSection = () => {
   const classes = useStyles();
@@ -34,18 +35,14 @@ const LastSection = () => {
             teams can agree on.
           </Typography>
 
-          <Typography
-            variant="h6"
-            color="inherit"
-            sx={{ mt: 30, fontSize: { xs: 18, sm: 23 } }}
-          >
-            This is why React is more than a library, an architecture, or even
+          <H6Typography
+            text="This is why React is more than a library, an architecture, or even
             an ecosystem. React is a community. It’s a place where you can ask
             for help, find opportunities, and meet new friends. You will meet
             both developers and designers, beginners and experts, researchers
             and artists, teachers and students. Our backgrounds may be very
-            different, but React lets us all create user interfaces together.
-          </Typography>
+            different, but React lets us all create user interfaces together."
+          />
 
           <Box sx={{ textAlign: "center", mt: 20 }}>
             <Avatar
