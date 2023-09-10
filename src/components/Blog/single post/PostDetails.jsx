@@ -46,7 +46,7 @@ const PostDetails = ({ title, text, post }) => {
         <EightBlogSection />
       </Stack>
 
-      <ButtonBlogSection />
+      <ButtonBlogSection post={post} />
 
       <CustomDivider />
 
