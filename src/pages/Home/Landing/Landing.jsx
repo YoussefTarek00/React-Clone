@@ -10,29 +10,26 @@ import ReactLogo from "../../../../Images/logo192.png";
 import { useNavigate } from "react-router-dom";
 import { StyledSection } from "../../../components/Style/AccessThemes";
 import GetStartedButton from "../../../components/Button component/GetStartedButton";
+import { useStyles } from "../../page setup/PageSetupStyle";
 
 const Landing = () => {
   const navigate = useNavigate();
   const theme = useTheme();
+  const classes = useStyles();
 
   return (
     <StyledSection>
       <Stack
         spacing={2}
-        sx={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          pb: "7px",
-          height: {xs:800 ,sm:700},
-        }}
+        className={classes.root}
+        sx={{ p: { xs: 2, sm: 5, md: 10, lg: 25 } }}
       >
         <Avatar
           src={ReactLogo}
           alt="react logo"
           sx={{ display: "block", width: 120, height: 120 }}
         />
-        <Box sx={{ textAlign: "center" }}>
+        <Box >
           <Typography variant="h2" color="inherit">
             React
           </Typography>
@@ -40,7 +37,7 @@ const Landing = () => {
             The library for web and native user interfaces
           </Typography>
         </Box>
-        <Box display="flex">
+        <Box>
           <GetStartedButton text="Learn React" />
           <Button
             sx={{

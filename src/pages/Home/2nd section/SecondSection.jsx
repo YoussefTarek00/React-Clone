@@ -15,10 +15,8 @@ const SecondSection = () => {
         className={classes.root}
         sx={{ px: { xs: 2, sm: 5, md: 10, lg: 25 } }}
       >
-        <Box sx={{ textAlign: "center" }}>
-          <H2Typography
-            text=" Create user interfaces "
-          />
+        <Box>
+          <H2Typography text=" Create user interfaces " />
           <br />
           <H2Typography
             text=" 

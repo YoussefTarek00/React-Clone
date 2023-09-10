@@ -19,7 +19,7 @@ const FifthSection = () => {
         className={classes.root}
         sx={{ px: { xs: 2, sm: 5, md: 10, lg: 25 } }}
       >
-        <Box sx={{ textAlign: "center" }}>
+        <Box>
           <H2Typography text="Go full-stack" />
           <br />
           <H2Typography text="with a framework" />

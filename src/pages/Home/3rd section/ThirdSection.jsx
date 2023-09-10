@@ -15,7 +15,7 @@ const ThirdSection = () => {
         className={classes.root}
         sx={{ px: { xs: 2, sm: 5, md: 10, lg: 25 } }}
       >
-        <Box sx={{ textAlign: "center" }}>
+        <Box>
           <H2Typography text="Write components" />
           <br />
           <H2Typography text="with code and markup" />

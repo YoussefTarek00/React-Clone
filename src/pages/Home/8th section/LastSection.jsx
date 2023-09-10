@@ -16,13 +16,11 @@ const LastSection = () => {
         className={classes.root}
         sx={{ px: { xs: 2, sm: 5, md: 10, lg: 25 } }}
       >
-        <Box sx={{ textAlign: "center" }}>
-          <H2Typography
-            text=" Join a community"
-          />
-            <br />
-           <H2Typography text="of millions"/>
-            
+        <Box>
+          <H2Typography text=" Join a community" />
+          <br />
+          <H2Typography text="of millions" />
+
           <Typography
             sx={{ mt: 5, fontSize: { xs: 18, sm: 23 } }}
             variant="h6"
@@ -42,19 +40,15 @@ const LastSection = () => {
             different, but React lets us all create user interfaces together."
           />
 
-          <Box sx={{ textAlign: "center", mt: 20 }}>
+          <Box sx={{ mt: 20 }}>
             <Avatar
               src={ReactLogo}
               alt="react logo"
               sx={{ display: "block", width: 120, height: 120, margin: "auto" }}
             />
-            <Typography
-              variant="h2"
-              color="inherit"
-              sx={{ fontSize: { xs: 35, sm: 40, md: 50 } }}
-            >
-              Welcome to the <br /> React community
-            </Typography>
+            <H2Typography text="Welcome to the" />
+            <br />
+            <H2Typography text="React community" />
           </Box>
           <GetStartedButton text="Get Started" />
         </Box>

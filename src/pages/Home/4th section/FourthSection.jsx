@@ -18,7 +18,7 @@ const FourthSection = () => {
         className={classes.root}
         sx={{ px: { xs: 2, sm: 5, md: 10, lg: 25 } }}
       >
-        <Box sx={{ textAlign: "center" }}>
+        <Box>
           <H2Typography text="Add interactivity" />
           <br /> <H2Typography text="wherever you need it" />
           <Typography
