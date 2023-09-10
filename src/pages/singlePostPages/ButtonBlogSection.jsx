@@ -4,10 +4,14 @@ import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 import { useNavigate, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import { SxButton } from "./Custom/SxButton";
+import { CustomLink } from "./Custom/CustomLink";
 
 const ButtonBlogSection = () => {
   const theme = useTheme();
   const navigate = useNavigate();
+  const classes = SxButton();
+  const LinkClasses = CustomLink();
 
   const { id } = useParams();
   const [post, setPost] = useState(null);
@@ -41,17 +45,12 @@ const ButtonBlogSection = () => {
           px: 5,
         }}
       >
-        {post ? (
+        {post && (
           <>
             <Button
               id="prev"
+              className={classes.root}
               sx={{
-                textTransform: "none",
-                display: "flex",
-                flexDirection: "column",
-                borderRadius: 5,
-                p: 5,
-                mt: 5,
                 width: { xs: "10rem", sm: "20rem" },
               }}
               startIcon={
@@ -70,7 +69,7 @@ const ButtonBlogSection = () => {
               <Link
                 underline="none"
                 color="inherit"
-                sx={{ textTransform: "uppercase", fontSize: 13 }}
+                className={LinkClasses.root}
               >
                 previous
               </Link>
@@ -94,13 +93,8 @@ const ButtonBlogSection = () => {
               }
               variant="text"
               color="inherit"
+              className={classes.root}
               sx={{
-                textTransform: "none",
-                display: "flex",
-                flexDirection: "column",
-                borderRadius: 5,
-                p: 5,
-                mt: 5,
                 width: { xs: "10rem", sm: "20rem" },
               }}
               onClick={handleNext}
@@ -108,7 +102,7 @@ const ButtonBlogSection = () => {
               <Link
                 underline="none"
                 color="inherit"
-                sx={{ textTransform: "uppercase", fontSize: 13 }}
+                className={LinkClasses.root}
               >
                 next
               </Link>
@@ -123,7 +117,7 @@ const ButtonBlogSection = () => {
               </Link>
             </Button>
           </>
-        ) : null}
+        )}
       </Box>
     </>
   );
