@@ -1,5 +1,5 @@
 import { Box, Link, Typography } from "@mui/material";
-import { UkSection } from "../../Style/AccessThemes";
+import { UkSection } from "../Style/AccessThemes";
 
 
 

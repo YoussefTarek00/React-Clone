@@ -1,9 +1,9 @@
 import { Route, Routes } from "react-router-dom";
 import NotFound from "./components/NotFound/NotFound";
 import Root from "./components/Root";
-import Home from "./components/Pages/HomePages/Home/Home";
-import PostsList from "./components/Pages/HomePages/Home/post section/PostsList";
-import SinglePost from "./components/Pages/HomePages/Home/post section/single post/SinglePost";
+import Home from "./components/Home/Home";
+import PostsList from "./components/Blog/post section/PostsList";
+import SinglePost from "./components/Blog/single post/SinglePost";
 
 function App() {
   return (

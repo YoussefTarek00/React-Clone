@@ -1,5 +1,5 @@
 import { Box, Link, Stack, Typography, useTheme } from "@mui/material";
-import BgTypography from "../../../../../Text component/BgTypography";
+import BgTypography from "../../components/Text component/BgTypography";
 
 const ThirdBlogSection = () => {
   const theme = useTheme();

@@ -1,10 +1,10 @@
 import { Box, Skeleton, Typography } from "@mui/material";
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { StyledSection } from "../../../../../Style/AccessThemes";
+import { StyledSection } from "../../../components/Style/AccessThemes";
 import PostDetails from "./PostDetails";
 import axios from "axios";
-import BlogIcon from "../../../../Text component/BlogIcon";
+import BlogIcon from "../../Text component/BlogIcon";
 
 const SinglePost = () => {
   const [post, setPost] = useState(null);

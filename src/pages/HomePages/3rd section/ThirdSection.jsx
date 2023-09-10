@@ -1,6 +1,6 @@
 import { Box, Stack, Typography } from "@mui/material";
 import { StyledSection } from "../../../Style/AccessThemes";
-import BgTypography from "../../Text component/BgTypography";
+import BgTypography from "../../../components/Text component/BgTypography";
 import { useStyles } from "../../page setup/PageSetupStyle";
 
 const ThirdSection = () => {

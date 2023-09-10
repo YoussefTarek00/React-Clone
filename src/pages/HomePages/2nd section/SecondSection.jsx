@@ -1,7 +1,7 @@
 import { Stack, Typography, Box, Button, ThemeProvider } from "@mui/material";
-import BgTypography from "../../Text component/BgTypography";
+import BgTypography from "../../../components/Text component/BgTypography";
 import { useStyles } from "../../page setup/PageSetupStyle";
-import { StyledSecondSection } from "../../../Style/AccessThemes";
+import { StyledSecondSection } from "../../../components/Style/AccessThemes";
 
 const SecondSection = () => {
   const classes = useStyles();

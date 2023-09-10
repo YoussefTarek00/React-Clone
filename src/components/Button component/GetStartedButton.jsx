@@ -1,6 +1,6 @@
 import {  Button, ThemeProvider } from "@mui/material";
 import { useNavigate } from "react-router-dom";
-import { ButtonTheme } from "../../Style/AccessThemes";
+import { ButtonTheme } from "../Style/AccessThemes";
 
 const GetStartedButton = ({text }) => {
   const navigate = useNavigate();

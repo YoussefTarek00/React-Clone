@@ -6,10 +6,10 @@ import {
   Typography,
   useTheme,
 } from "@mui/material";
-import ReactLogo from "../../../../../Images/logo192.png";
+import ReactLogo from "../../../../Images/logo192.png";
 import { useNavigate } from "react-router-dom";
-import { StyledSection } from "../../../Style/AccessThemes";
-import GetStartedButton from "../../Button component/GetStartedButton";
+import { StyledSection } from "../../../components/Style/AccessThemes";
+import GetStartedButton from "../../../components/Button component/GetStartedButton";
 
 const Landing = () => {
   const navigate = useNavigate();

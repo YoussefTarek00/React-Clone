@@ -8,11 +8,11 @@ import {
   Stack,
   Typography,
 } from "@mui/material";
-import metaLogo from "../../../../../Images/meta-removebg-preview.png";
+import metaLogo from "../../../../Images/meta-removebg-preview.png";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import GitHubIcon from "@mui/icons-material/GitHub";
-import { StyledSecondSection } from "../../../Style/AccessThemes";
+import { StyledSecondSection } from "../../../components/Style/AccessThemes";
 
 const Footer = () => {
   return (
