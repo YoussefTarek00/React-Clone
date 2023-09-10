@@ -13,7 +13,6 @@ function H6Typography(props) {
   return (
     <Typography
       variant="h6"
-      className={classes.root}
       sx={{mt:30, fontSize: { xs: 18, sm: 23 } }}
     >
       {props.text}

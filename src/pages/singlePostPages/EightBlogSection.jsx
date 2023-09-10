@@ -20,7 +20,7 @@ const EightBlogSection = () => {
         <Typography variant="h5">
           Testing libraries against both Stable and Canary versions
         </Typography>
-        <Typography variant="body1" sx={{ mt: 3, mb: 3, lineHeight: 2 }}>
+        <Typography variant="body1" className={classes.root}>
           We do not expect library authors to test every single Canary release
           since it would be prohibitively difficult. However, just as when we{" "}
           <Link

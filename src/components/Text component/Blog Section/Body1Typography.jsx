@@ -5,7 +5,7 @@ import { makeStyles } from "@mui/styles";
 
 export const Body1TypographyStyles = makeStyles({
   root: {
-    marginTop: '24px',
+    marginTop: "24px",
     marginBottom: "24px",
     lineHeight: 2
   },
