@@ -1,14 +1,13 @@
 import { Button, Stack, ThemeProvider, Typography } from "@mui/material";
 import { ButtonTheme } from "../../components/Style/AccessThemes";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
+import Body1Typography from "../../components/Text component/Blog Section/Body1Typography";
 
 const LastSection = () => {
   return (
     <Stack sx={{ alignItems: "center" }}>
-      <Typography variant="body1" sx={{ fontWeight: "bold", mb: 2, mt: 2 }}>
-        How do you like these docs?
-      </Typography>
-
+      <Body1Typography text="How do you like these docs?"/>
+       
       <ThemeProvider theme={ButtonTheme}>
         <Button
           href="#"

@@ -1,19 +1,21 @@
 import { Box, Link, Stack, Typography, useTheme } from "@mui/material";
 import BgTypography from "../../components/Text component/BgTypography";
+import { Body1TypographyStyles } from "../../components/Text component/Blog Section/Body1Typography";
 
 const ThirdBlogSection = () => {
   const theme = useTheme();
+  const classes = Body1TypographyStyles();
 
   return (
     <Stack>
       <Box>
-        <Typography variant="h5" sx={{ mt: 3, mb: 3 }}>
+        <Typography variant="h5" className={classes.root}>
           Can we just do more minor releases?{" "}
         </Typography>
         <Typography variant="body1">
           Generally, we do use minor releases for introducing new features.
         </Typography>
-        <Typography variant="body1" sx={{ mt: 3, mb: 3, lineHeight: 2 }}>
+        <Typography variant="body1" className={classes.root}>
           However, this isn’t always possible. Sometimes, new features are
           interconnected with other new features which have not yet been fully
           completed and that we’re still actively iterating on. We can’t release
@@ -25,7 +27,7 @@ const ThirdBlogSection = () => {
           aren’t ready without a flurry of major version releases, which semver
           would require us to do.{" "}
         </Typography>
-        <Typography variant="body1" sx={{ mt: 3, mb: 3, lineHeight: 2 }}>
+        <Typography variant="body1" className={classes.root}>
           At Meta, we’ve solved this problem by building React from the{" "}
           <BgTypography text="main" /> branch, and manually updating it to a
           specific pinned commit every week. This is also the approach that
@@ -36,7 +38,7 @@ const ThirdBlogSection = () => {
           adopt new React features at the framework level without getting
           coupled to the global React release schedule.
         </Typography>
-        <Typography variant="body1" sx={{ mt: 3, mb: 3, lineHeight: 2 }}>
+        <Typography variant="body1" className={classes.root}>
           We would like to make this workflow available to other frameworks and
           curated setups. For example, it lets a framework on top of React
           include a React-related breaking change before this breaking change
@@ -45,7 +47,7 @@ const ThirdBlogSection = () => {
           lets a framework release such a change in its own minor version
           without breaking semver.
         </Typography>
-        <Typography variant="body1" sx={{ mt: 3, mb: 3, lineHeight: 2 }}>
+        <Typography variant="body1" className={classes.root}>
           Rolling releases with the Canaries channel will allow us to have a
           tighter feedback loop and ensure that new features get comprehensive
           testing in the community. This workflow is closer to how TC39, the

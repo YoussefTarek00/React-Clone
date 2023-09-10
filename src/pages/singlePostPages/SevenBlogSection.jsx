@@ -1,13 +1,15 @@
 import { Box, Link, Typography, useTheme } from "@mui/material";
 import BgTypography from "../../components/Text component/BgTypography";
+import { Body1TypographyStyles } from "../../components/Text component/Blog Section/Body1Typography";
 
 const SevenBlogSection = () => {
   const theme = useTheme();
+  const classes = Body1TypographyStyles();
 
   return (
     <Box>
       <Typography variant="h5">Example: React Server Components</Typography>
-      <Typography variant="body1" sx={{ mt: 3, mb: 3, lineHeight: 2 }}>
+      <Typography variant="body1" className={classes.root}>
         As we{" "}
         <Link
           href="#"
@@ -31,7 +33,7 @@ const SevenBlogSection = () => {
         </Link>
         ) and expect more breaking changes there.
       </Typography>
-      <Typography variant="body1" sx={{ mt: 3, mb: 3, lineHeight: 2 }}>
+      <Typography variant="body1" className={classes.root}>
         This means that React Server Components are ready to be adopted by
         frameworks. However, until the next major React release, the only way
         for a framework to adopt them is to ship a pinned Canary version of

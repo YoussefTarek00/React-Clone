@@ -1,19 +1,25 @@
 import { Box, Stack, Typography } from "@mui/material";
-import BgTypography from "../../components/Text component/BgTypography"
+import BgTypography from "../../components/Text component/BgTypography";
+import Body1Typography, {
+  Body1TypographyStyles,
+} from "../../components/Text component/Blog Section/Body1Typography";
 
 const FifthBlogSection = () => {
+  const classes = Body1TypographyStyles();
+
   return (
     <Stack>
       <Box>
         <Typography variant="h5">
           Announcing breaking changes and new features early
         </Typography>
-        <Typography variant="body1" sx={{ mt: 3, mb: 3 }}>
-          Canary releases represent our best guess of what will go into the next
-          stable React release at any given time.
-        </Typography>
-        <Typography variant="body1" sx={{ mt: 3, mb: 3, lineHeight: 2 }}>
-          Traditionally, we’ve only announced breaking changes at the end of the
+        <Body1Typography
+          text="Canary releases represent our best guess of what will go into the next
+          stable React release at any given time."
+        />
+
+        <Body1Typography
+          text="Traditionally, we’ve only announced breaking changes at the end of the
           release cycle (when doing a major release). Now that Canary releases
           are an officially supported way to consume React, we plan to shift
           towards announcing breaking changes and significant new features as
@@ -24,9 +30,10 @@ const FifthBlogSection = () => {
           updates the pinned React canary to include that change, you can link
           to our blog post from your release notes. Finally, when a stable major
           version of React is ready, we will link to those already published
-          blog posts, which we hope will help our team make progress faster.
-        </Typography>
-        <Typography variant="body1" sx={{ mt: 3, mb: 3, lineHeight: 2 }}>
+          blog posts, which we hope will help our team make progress faster."
+        />
+
+        <Typography variant="body1" className={classes.root}>
           We plan to document APIs as they land in Canaries—even if these APIs
           are not yet available outside of them. APIs that are only available in
           Canaries will be marked with a special note on the corresponding

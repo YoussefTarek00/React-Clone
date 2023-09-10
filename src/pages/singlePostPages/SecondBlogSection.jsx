@@ -1,10 +1,15 @@
 import { Box, List, ListItem, ListItemText, Typography } from "@mui/material";
 import BgTypography from "../../components/Text component/BgTypography";
+import MarginBotTypo from "./Custom/MarginBotTypo";
+import ListitemText, { ListitemTextStyles } from "./Custom/ListItemText";
+import { Body1TypographyStyles } from "../../components/Text component/Blog Section/Body1Typography";
 
 const SecondBlogSection = () => {
+  const classes = ListitemTextStyles();
+  const margin = Body1TypographyStyles();
   return (
     <Box sx={{ lineHeight: 2 }}>
-      <Typography variant="h5" color="inherit" sx={{ mt: 3, mb: 3 }}>
+      <Typography variant="h5" color="inherit" className={margin.root}>
         How React features are usually developed
       </Typography>
       <Typography variant="p" color="inherit">
@@ -12,10 +17,9 @@ const SecondBlogSection = () => {
       </Typography>
       <List>
         <ListItem disablePadding>
-          <Typography variant="body1" sx={{ mb: 3 }}>
-            1.
-          </Typography>
-          <ListItemText sx={{ pl: 1 }}>
+          <MarginBotTypo text="1." />
+
+          <ListItemText className={classes.root}>
             We develop an initial version and prefix it with{" "}
             <BgTypography text="experimental_" /> or{" "}
             <BgTypography text=" unstable_" />. The feature is only available in
@@ -24,21 +28,17 @@ const SecondBlogSection = () => {
           </ListItemText>
         </ListItem>
         <ListItem disablePadding>
-          <Typography variant="body1" sx={{ mb: 3 }}>
-            2.
-          </Typography>
-          <ListItemText sx={{ pl: 1 }}>
-            We find a team at Meta willing to help us test this feature and
+          <MarginBotTypo text="2." />
+          <ListitemText
+            text="We find a team at Meta willing to help us test this feature and
             provide feedback on it. This leads to a round of changes. As the
             feature becomes more stable, we work with more teams at Meta to try
-            it out.
-          </ListItemText>
+            it out."
+          />
         </ListItem>
         <ListItem disablePadding>
-          <Typography variant="body1" sx={{ mb: 3 }}>
-            3.
-          </Typography>
-          <ListItemText sx={{ pl: 1 }}>
+          <MarginBotTypo text="3." />
+          <ListItemText className={classes.root}>
             Eventually, we feel confident in the design. We remove the prefix
             from the API name, and make the feature available on the{" "}
             <BgTypography text=" main" /> branch by default, which most Meta
@@ -46,40 +46,38 @@ const SecondBlogSection = () => {
           </ListItemText>
         </ListItem>
         <ListItem disablePadding>
-          <Typography variant="body1" sx={{ mb: 3 }}>
-            4.
-          </Typography>
-          <ListItemText sx={{ pl: 1 }}>
-            As we build confidence in the direction, we also post an RFC for the
+          <MarginBotTypo text="4." />
+          <ListitemText
+            text=" As we build confidence in the direction, we also post an RFC for the
             new feature. At this point we know the design works for a broad set
-            of cases, but we might make some last minute adjustments.
-          </ListItemText>
+            of cases, but we might make some last minute adjustments."
+          />
         </ListItem>
         <ListItem disablePadding>
-          <Typography variant="body1" sx={{ mb: 3 }}>
-            5.
-          </Typography>
-          <ListItemText sx={{ pl: 1 }}>
-            When we are close to cutting an open source release, we write
+          <MarginBotTypo text="5." />
+          <ListitemText
+            text="When we are close to cutting an open source release, we write
             documentation for the feature and finally release the feature in a
-            stable React release.
-          </ListItemText>
+            stable React release."
+          />
         </ListItem>
       </List>
       <Box>
-        <Typography variant="body1" sx={{ mt: 2 }}>
-          This playbook works well for most features we’ve released so far.
+        <MarginBotTypo
+          text=" This playbook works well for most features we’ve released so far.
           However, there can be a significant gap between when the feature is
           generally ready to use (step 3) and when it is released in open source
-          (step 5).
-        </Typography>{" "}
+          (step 5)."
+        />
+
         <br />
-        <Typography variant="body1" sx={{ fontWeight: "bold", mt: 2 }}>
-          We’d like to offer the React community an option to follow the same
+        <MarginBotTypo
+          text=" We’d like to offer the React community an option to follow the same
           approach as Meta, and adopt individual new features earlier (as they
           become available) without having to wait for the next release cycle of
-          React.
-        </Typography>
+          React."
+        />
+
         <br />
         <Typography variant="body1">
           As always, all React features will eventually make it into a Stable

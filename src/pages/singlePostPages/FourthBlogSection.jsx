@@ -1,7 +1,11 @@
 import { Box, Link, Typography, useTheme } from "@mui/material";
+import Body1Typography, {
+  Body1TypographyStyles,
+} from "../../components/Text component/Blog Section/Body1Typography";
 
 const FourthBlogSection = () => {
   const theme = useTheme();
+  const classes = Body1TypographyStyles();
 
   return (
     <Box>
@@ -9,7 +13,7 @@ const FourthBlogSection = () => {
         {" "}
         Why not use experimental releases instead?{" "}
       </Typography>
-      <Typography variant="body1" sx={{ mt: 3, mb: 3, lineHeight: 2 }}>
+      <Typography variant="body1" className={classes.root}>
         Although you can technically use{" "}
         <Link
           href="#"
@@ -29,7 +33,7 @@ const FourthBlogSection = () => {
         keep the version pinned and manually scan the GitHub commit log when
         updating between the pinned commits.
       </Typography>
-      <Typography variant="body1" sx={{ mt: 3, mb: 3, lineHeight: 2 }}>
+      <Typography variant="body1" className={classes.root}>
         <Typography variant="p" sx={{ fontWeight: "bold" }}>
           We expect that most people using React outside a curated setup (like a
           framework) will want to continue using the Stable releases.
@@ -44,10 +48,10 @@ const FourthBlogSection = () => {
         in and communicate to your users which React changes are included with
         your releases.
       </Typography>
-      <Typography variant="body1" sx={{ mt: 3, mb: 3 }}>
-        If you’re a framework author and want to try this approach, please get
-        in touch with us.
-      </Typography>
+      <Body1Typography
+        text="If you’re a framework author and want to try this approach, please get
+        in touch with us."
+      />
     </Box>
   );
 };
