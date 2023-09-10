@@ -4,6 +4,7 @@ import GetStartedButton from "../../../components/Button component/GetStartedBut
 import { useStyles } from "../../page setup/PageSetupStyle";
 import { StyledSecondSection } from "../../../components/Style/AccessThemes";
 import H6Typography from "../../../components/Text component/Home section/H6Typography";
+import H2Typography from "../../../components/Text component/Home section/H2Typography";
 
 const LastSection = () => {
   const classes = useStyles();
@@ -16,15 +17,12 @@ const LastSection = () => {
         sx={{ px: { xs: 2, sm: 5, md: 10, lg: 25 } }}
       >
         <Box sx={{ textAlign: "center" }}>
-          <Typography
-            variant="h2"
-            color="inherit"
-            sx={{ fontSize: { xs: 35, sm: 40, md: 50 } }}
-          >
-            Join a community
+          <H2Typography
+            text=" Join a community"
+          />
             <br />
-            of millions
-          </Typography>
+           <H2Typography text="of millions"/>
+            
           <Typography
             sx={{ mt: 5, fontSize: { xs: 18, sm: 23 } }}
             variant="h6"

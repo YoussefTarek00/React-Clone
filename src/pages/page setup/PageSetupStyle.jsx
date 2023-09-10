@@ -1,7 +1,8 @@
 
+import { Stack } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 
-export const useStyles = makeStyles({
+ export const useStyles = makeStyles({
   root: {
     display: "flex",
     justifyContent:'center',
@@ -12,5 +13,17 @@ export const useStyles = makeStyles({
     
   },
 });
+
+function StyleStack(props) {
+  const classes = useStyles();
+
+  return (
+    <Stack spacing={2} sx={{ px: { xs: 2, sm: 5, md: 10, lg: 25 } }} className={classes.root}>
+      {props.text}
+    </Stack>
+  );
+}
+
+export default StyleStack;
 
 

@@ -5,6 +5,7 @@ import CodeOffIcon from "@mui/icons-material/CodeOff";
 import { useStyles } from "../../page setup/PageSetupStyle";
 import { StyledSecondSection } from "../../../components/Style/AccessThemes";
 import H6Typography from "../../../components/Text component/Home section/H6Typography";
+import H2Typography from "../../../components/Text component/Home section/H2Typography";
 
 const FourthSection = () => {
   const navigate = useNavigate();
@@ -18,13 +19,8 @@ const FourthSection = () => {
         sx={{ px: { xs: 2, sm: 5, md: 10, lg: 25 } }}
       >
         <Box sx={{ textAlign: "center" }}>
-          <Typography
-            variant="h2"
-            color="inherit"
-            sx={{ fontSize: { xs: 25, sm: 40, md: 50 } }}
-          >
-            Add interactivity <br /> wherever you need it{" "}
-          </Typography>
+          <H2Typography text="Add interactivity" />
+          <br /> <H2Typography text="wherever you need it" />
           <Typography
             sx={{ mt: 5, fontSize: { xs: 18, sm: 23 } }}
             variant="h6"
@@ -35,13 +31,11 @@ const FourthSection = () => {
             like when the user types into an input. React will then update the
             screen to match the new data.
           </Typography>
-
           <H6Typography
             text="You don’t have to build your whole page in React. Add React to your
             existing HTML page, and render interactive React components anywhere
             on it."
           />
-
           <CustomButton
             icon={<CodeOffIcon />}
             ButtonText="Add React to your page"

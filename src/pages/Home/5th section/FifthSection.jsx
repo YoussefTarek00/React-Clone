@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 import CustomButton from "../../../components/Button component/CustomButton";
 import { useStyles } from "../../page setup/PageSetupStyle";
 import H6Typography from "../../../components/Text component/Home section/H6Typography";
+import H2Typography from "../../../components/Text component/Home section/H2Typography";
 
 const FifthSection = () => {
   const navigate = useNavigate();
@@ -19,14 +20,10 @@ const FifthSection = () => {
         sx={{ px: { xs: 2, sm: 5, md: 10, lg: 25 } }}
       >
         <Box sx={{ textAlign: "center" }}>
-          <Typography
-            variant="h2"
-            color="inherit"
-            sx={{ fontSize: { xs: 25, sm: 40, md: 50 } }}
-          >
-            Go full-stack <br />
-            with a framework
-          </Typography>
+          <H2Typography text="Go full-stack" />
+          <br />
+          <H2Typography text="with a framework" />
+
           <Typography
             sx={{ mt: 5, fontSize: { xs: 18, sm: 23 } }}
             variant="h6"
@@ -61,12 +58,13 @@ const FifthSection = () => {
             </Link>
           </Typography>
 
-          <H6Typography text="React is also an architecture. Frameworks that implement it let you
+          <H6Typography
+            text="React is also an architecture. Frameworks that implement it let you
             fetch data in asynchronous components that run on the server or even
             during the build. Read data from a file or a database, and pass it
             down to your interactive components"
           />
-            
+
           <CustomButton
             icon={<WorkspacesIcon />}
             ButtonText="Get started with a framework"

@@ -3,6 +3,7 @@ import BgTypography from "../../../components/Text component/BgTypography";
 import { useStyles } from "../../page setup/PageSetupStyle";
 import { StyledSecondSection } from "../../../components/Style/AccessThemes";
 import H6Typography from "../../../components/Text component/Home section/H6Typography";
+import H2Typography from "../../../components/Text component/Home section/H2Typography";
 
 const SecondSection = () => {
   const classes = useStyles();
@@ -15,13 +16,14 @@ const SecondSection = () => {
         sx={{ px: { xs: 2, sm: 5, md: 10, lg: 25 } }}
       >
         <Box sx={{ textAlign: "center" }}>
-          <Typography
-            variant="h2"
-            color="inherit"
-            sx={{ fontSize: { xs: 25, sm: 40, md: 50 } }}
-          >
-            Create user interfaces <br /> from components
-          </Typography>
+          <H2Typography
+            text=" Create user interfaces "
+          />
+          <br />
+          <H2Typography
+            text=" 
+            from components"
+          />
 
           <Typography
             sx={{ mt: 5, fontSize: { xs: 18, sm: 23 } }}
@@ -36,7 +38,7 @@ const SecondSection = () => {
             screens, pages, and apps.
           </Typography>
 
-          <H6Typography 
+          <H6Typography
             text=" Whether you work on your own or with thousands of other developers,
             using React feels the same. It is designed to let you seamlessly
             combine components written by independent people, teams, and
