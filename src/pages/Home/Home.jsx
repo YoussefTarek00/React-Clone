@@ -1,12 +1,12 @@
 import { Box } from "@mui/material";
-import Landing from "./Landing";
-import SecondSection from "../../pages/HomePages/SecondSection";
-import ThirdSection from "../../pages/HomePages/ThirdSection";
-import FourthSection from "../../pages/HomePages/FourthSection";
-import FifthSection from "../../pages/HomePages/FifthSection";
-import SixSection from "../../pages/HomePages/SixSection";
-import SevenSection from "../../pages/HomePages/SevenSection";
-import LastSection from "../../pages/HomePages/LastSection";
+import Landing from "./Landing/Landing";
+import SecondSection from "./2nd section/SecondSection";
+import ThirdSection from "./3rd section/ThirdSection";
+import FourthSection from "./4th section/FourthSection";
+import FifthSection from "./5th section/FifthSection";
+import SixSection from "./6th section/SixSection";
+import SevenSection from "./7th section/SevenSection";
+import LastSection from "./8th section/LastSection";
 
 const Home = () => {
   return (

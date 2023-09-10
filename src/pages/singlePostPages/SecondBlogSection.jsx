@@ -1,5 +1,5 @@
 import { Box, List, ListItem, ListItemText, Typography } from "@mui/material";
-import BgTypography from "../../../../../Text component/BgTypography";
+import BgTypography from "../../components/Text component/BgTypography";
 
 const SecondBlogSection = () => {
   return (

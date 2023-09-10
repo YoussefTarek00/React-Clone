@@ -1,5 +1,5 @@
 import { useSelector } from "react-redux";
-import { selectAllUsers } from "../../../../RTK features/Slices/user/userSlice";
+import { selectAllUsers } from "../../../components/RTK features/Slices/user/userSlice";
 import { Link, useTheme } from "@mui/material";
 
 const PostAuthor = ({ userId }) => {

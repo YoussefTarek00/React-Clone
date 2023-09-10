@@ -1,5 +1,5 @@
 import { Button, Stack, ThemeProvider, Typography } from "@mui/material";
-import { ButtonTheme } from "../../../../../../Style/AccessThemes";
+import { ButtonTheme } from "../../components/Style/AccessThemes";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 
 const LastSection = () => {

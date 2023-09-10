@@ -1,5 +1,5 @@
 import { Box, Divider, Stack, Typography } from "@mui/material";
-import PostAuthor from "../PostAuthor";
+import PostAuthor from "./PostAuthor";
 import FirstBlogSection from "../../../pages/singlePostPages/FirstBlogSection";
 import SecondBlogSection from "../../../pages/singlePostPages/SecondBlogSection";
 import ThirdBlogSection from "../../../pages/singlePostPages/ThirdBlogSection";

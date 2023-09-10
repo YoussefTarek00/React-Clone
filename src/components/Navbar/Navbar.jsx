@@ -21,7 +21,7 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import NightlightRoundIcon from "@mui/icons-material/NightlightRound";
 import LightModeIcon from "@mui/icons-material/LightMode";
 import { useState } from "react";
-import ReactLogo from "../../../../Images/logo192.png";
+import ReactLogo from "../../../Images/logo192.png";
 import { useNavigate } from "react-router-dom";
 import { PropTypes } from "prop-types";
 import {
@@ -31,7 +31,7 @@ import {
   SearchIconWrapper3,
   StyledAppBar,
   StyledInputBase,
-} from "../../Style/AccessThemes";
+} from "../../components/Style/AccessThemes";
 import NavbarData from "./Data/NavbarData";
 import NavbarMenu from "./Data/NavbarMenu";
 import SupportUk from "./SupportUk";

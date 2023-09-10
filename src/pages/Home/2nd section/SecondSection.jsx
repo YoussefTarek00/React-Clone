@@ -35,16 +35,12 @@ const SecondSection = () => {
             screens, pages, and apps.
           </Typography>
 
-          <Typography
-            variant="h6"
-            color="inherit"
-            sx={{ mt: 30, fontSize: { xs: 18, sm: 23 } }}
-          >
-            Whether you work on your own or with thousands of other developers,
+          <H6Typography
+            text=" Whether you work on your own or with thousands of other developers,
             using React feels the same. It is designed to let you seamlessly
             combine components written by independent people, teams, and
-            organizations.
-          </Typography>
+            organizations."
+          />
         </Box>
       </Stack>
     </StyledSecondSection>

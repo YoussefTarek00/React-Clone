@@ -1,10 +1,10 @@
 import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { fetchData } from "../../../../RTK features/Slices/posts/postSlice";
+import { fetchData } from "../../../components/RTK features/Slices/posts/postSlice";
 import { Box, Grid, Link, Skeleton, Typography, useTheme } from "@mui/material";
 import PostsCards from "./PostsCards";
-import { StyledSection } from "../../../../Style/AccessThemes";
-import BlogIcon from "../../../Text component/BlogIcon";
+import { StyledSection } from "../../../components/Style/AccessThemes";
+import BlogIcon from "../../Text component/BlogIcon";
 
 const PostsList = () => {
   const data = useSelector((state) => state.post);
