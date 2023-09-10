@@ -1,6 +1,5 @@
 import {
   Box,
-  Divider,
   Link,
   List,
   ListItem,
@@ -8,6 +7,8 @@ import {
   Typography,
   useTheme,
 } from "@mui/material";
+
+import CustomDivider from "../../components/Text component/Blog Section/CustomDivider";
 
 const FirstBlogSection = () => {
   const theme = useTheme();
@@ -32,7 +33,7 @@ const FirstBlogSection = () => {
           individual React features from the React release schedule.
         </Typography>
       </Box>
-      <Divider sx={{ mt: 3, mb: 3 }} />
+      <CustomDivider />
       <Box>
         <Typography variant="h5" color="inherit">
           tl;dr

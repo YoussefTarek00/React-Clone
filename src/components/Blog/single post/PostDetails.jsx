@@ -10,6 +10,7 @@ import SevenBlogSection from "../../../pages/singlePostPages/SevenBlogSection";
 import EightBlogSection from "../../../pages/singlePostPages/EightBlogSection";
 import ButtonBlogSection from "../../../pages/singlePostPages/ButtonBlogSection";
 import LastSection from "../../../pages/singlePostPages/LastSection";
+import CustomDivider from "../../Text component/Blog Section/CustomDivider";
 
 const PostDetails = ({ title, text, post }) => {
   return (
@@ -26,7 +27,7 @@ const PostDetails = ({ title, text, post }) => {
           </Typography>
         </Box>
 
-        <Divider sx={{ mt: 3, mb: 3 }} />
+        <CustomDivider />
 
         <FirstBlogSection />
 
@@ -47,11 +48,11 @@ const PostDetails = ({ title, text, post }) => {
 
       <ButtonBlogSection />
 
-      <Divider sx={{ mt: 8, mb: 3 }} />
+      <CustomDivider />
 
       <LastSection />
 
-      <Divider sx={{ mt: 2 }} />
+      <CustomDivider/>
     </>
   );
 };
