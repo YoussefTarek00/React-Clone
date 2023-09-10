@@ -3,7 +3,7 @@ import { makeStyles } from "@mui/styles";
 
 export const H6TypographyStyles = makeStyles({
   root: {
-    marginTop: 5,
+    paddingTop: 30,
     fontSize: 22
   },
 });
