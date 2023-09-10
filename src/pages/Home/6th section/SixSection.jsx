@@ -1,9 +1,9 @@
 import { Box, Stack, Typography } from "@mui/material";
 import DevicesIcon from "@mui/icons-material/Devices";
-import CustomButton from "../../Button component/CustomButton";
+import CustomButton from "../../../components/Button component/CustomButton";
 import { useNavigate } from "react-router-dom";
 import { useStyles } from "../../page setup/PageSetupStyle";
-import { StyledSecondSection } from "../../../Style/AccessThemes";
+import { StyledSecondSection } from "../../../components/Style/AccessThemes";
 
 const SixSection = () => {
   const navigate = useNavigate();

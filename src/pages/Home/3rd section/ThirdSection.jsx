@@ -1,5 +1,5 @@
 import { Box, Stack, Typography } from "@mui/material";
-import { StyledSection } from "../../../Style/AccessThemes";
+import { StyledSection } from "../../../components/Style/AccessThemes";
 import BgTypography from "../../../components/Text component/BgTypography";
 import { useStyles } from "../../page setup/PageSetupStyle";
 
@@ -30,7 +30,7 @@ const ThirdSection = () => {
             React components are JavaScript functions. Want to show some content
             conditionally? Use an <BgTypography variant="span" text="if" />{" "}
             statement. Displaying a list? Try array{" "}
-            <BgTypography variant="span" text="map()"/>. Learning React is
+            <BgTypography variant="span" text="map()" />. Learning React is
             learning programming.
           </Typography>
 

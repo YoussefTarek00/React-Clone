@@ -1,10 +1,10 @@
 import { Box, Grid, Link, Stack, Typography } from "@mui/material";
-import { StyledSection } from "../../../Style/AccessThemes";
+import { StyledSection } from "../../../components/Style/AccessThemes";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import VideoLabelIcon from "@mui/icons-material/VideoLabel";
 import { useNavigate } from "react-router-dom";
 import ScienceIcon from "@mui/icons-material/Science";
-import CustomButton from "../../Button component/CustomButton";
+import CustomButton from "../../../components/Button component/CustomButton";
 import DevicesIcon from "@mui/icons-material/Devices";
 import { useStyles } from "../../page setup/PageSetupStyle";
 

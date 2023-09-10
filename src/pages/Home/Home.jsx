@@ -1,5 +1,5 @@
 import { Box } from "@mui/material";
-import Landing from "../../pages/HomePages/Landing";
+import Landing from "./Landing";
 import SecondSection from "../../pages/HomePages/SecondSection";
 import ThirdSection from "../../pages/HomePages/ThirdSection";
 import FourthSection from "../../pages/HomePages/FourthSection";

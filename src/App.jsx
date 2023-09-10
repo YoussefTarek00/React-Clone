@@ -1,7 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import NotFound from "./components/NotFound/NotFound";
 import Root from "./components/Root";
-import Home from "./components/Home/Home";
+import Home from "./pages/Home/Home";
 import PostsList from "./components/Blog/post section/PostsList";
 import SinglePost from "./components/Blog/single post/SinglePost";
 

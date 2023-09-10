@@ -1,8 +1,8 @@
 import { Box, Link, Stack, Typography, useTheme } from "@mui/material";
-import { StyledSection } from "../../../Style/AccessThemes";
+import { StyledSection } from "../../../components/Style/AccessThemes";
 import WorkspacesIcon from "@mui/icons-material/Workspaces";
 import { useNavigate } from "react-router-dom";
-import CustomButton from "../../Button component/CustomButton";
+import CustomButton from "../../../components/Button component/CustomButton";
 import { useStyles } from "../../page setup/PageSetupStyle";
 
 const FifthSection = () => {

@@ -1,8 +1,8 @@
 import { Avatar, Box, Stack, Typography } from "@mui/material";
-import ReactLogo from "../../../../../Images/logo192.png";
-import GetStartedButton from "../../Button component/GetStartedButton";
+import ReactLogo from "../../../../Images/logo192.png";
+import GetStartedButton from "../../../components/Button component/GetStartedButton";
 import { useStyles } from "../../page setup/PageSetupStyle";
-import { StyledSecondSection } from "../../../Style/AccessThemes";
+import { StyledSecondSection } from "../../../components/Style/AccessThemes";
 
 const LastSection = () => {
   const classes = useStyles();

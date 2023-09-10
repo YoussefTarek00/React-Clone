@@ -1,9 +1,9 @@
 import { Box, Stack, Typography } from "@mui/material";
 import { useNavigate } from "react-router-dom";
-import CustomButton from "../../Button component/CustomButton";
+import CustomButton from "../../../components/Button component/CustomButton";
 import CodeOffIcon from "@mui/icons-material/CodeOff";
 import { useStyles } from "../../page setup/PageSetupStyle";
-import { StyledSecondSection } from "../../../Style/AccessThemes";
+import { StyledSecondSection } from "../../../components/Style/AccessThemes";
 
 const FourthSection = () => {
   const navigate = useNavigate();
