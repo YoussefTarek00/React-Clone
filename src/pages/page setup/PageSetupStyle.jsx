@@ -19,7 +19,10 @@ import { makeStyles } from "@mui/styles";
     display: "flex",
     justifyContent:'center',
     alignItems: "center",
-    padding: "70px",
+    paddingTop: "70px",
+    paddingBottom: "100px",
+    paddingLeft: "200px",
+    paddingRight: "200px",
     height: "100%",
     textAlign: 'center'
 

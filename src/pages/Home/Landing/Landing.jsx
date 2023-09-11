@@ -29,7 +29,7 @@ const Landing = () => {
           alt="react logo"
           sx={{ display: "block", width: 120, height: 120 }}
         />
-        <Box >
+        <Box>
           <Typography variant="h2" color="inherit">
             React
           </Typography>

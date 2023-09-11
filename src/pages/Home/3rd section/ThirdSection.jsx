@@ -14,11 +14,9 @@ const ThirdSection = () => {
       <Stack
         spacing={2}
         className={classes.root}
-        sx={{ px: { xs: 2, sm: 5, md: 10, lg: 25 } }}
       >
         <Box>
           <H2Typography text="Write components" />
-          <br />
           <H2Typography text="with code and markup" />
 
           <Typography className={MtFont.root} variant="h6" color="inherit">

@@ -16,7 +16,7 @@ const LastSection = () => {
   return (
     <StyledSecondSection>
       <Stack spacing={2} className={classes.root}>
-        <Box >
+        <Box>
           <H2Typography text=" Join a community" />
           <H2Typography text="of millions" />
 
@@ -28,29 +28,31 @@ const LastSection = () => {
         </Box>
       </Stack>
 
-      <SwiperSlider />
-      
+      <Box>
+        <SwiperSlider />
+      </Box>
+
       <Stack spacing={2} className={classes.root}>
-          <H6Typography
-            text="This is why React is more than a library, an architecture, or even
+        <H6Typography
+          text="This is why React is more than a library, an architecture, or even
             an ecosystem. React is a community. It’s a place where you can ask
             for help, find opportunities, and meet new friends. You will meet
             both developers and designers, beginners and experts, researchers
             and artists, teachers and students. Our backgrounds may be very
             different, but React lets us all create user interfaces together."
-          />
+        />
 
-          <Box sx={{ pt: 20 }}>
-            <Avatar
-              src={ReactLogo}
-              alt="react logo"
-              sx={{ display: "block", width: 120, height: 120, margin: "auto" }}
-            />
-            <H2Typography text="Welcome to the" />
-            <br />
-            <H2Typography text="React community" />
-          </Box>
-          <GetStartedButton text="Get Started" />
+        <Box sx={{ pt: 20 }}>
+          <Avatar
+            src={ReactLogo}
+            alt="react logo"
+            sx={{ display: "block", width: 120, height: 120, margin: "auto" }}
+          />
+          <H2Typography text="Welcome to the" />
+          <br />
+          <H2Typography text="React community" />
+        </Box>
+        <GetStartedButton text="Get Started" />
       </Stack>
     </StyledSecondSection>
   );
