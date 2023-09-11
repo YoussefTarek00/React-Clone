@@ -18,7 +18,6 @@ const LastSection = () => {
       <Stack spacing={2} className={classes.root}>
         <Box >
           <H2Typography text=" Join a community" />
-          <br />
           <H2Typography text="of millions" />
 
           <Typography className={MtFont.root} variant="h6" color="inherit">
@@ -41,7 +40,7 @@ const LastSection = () => {
             different, but React lets us all create user interfaces together."
           />
 
-          <Box sx={{ mt: 20 }}>
+          <Box sx={{ pt: 20 }}>
             <Avatar
               src={ReactLogo}
               alt="react logo"

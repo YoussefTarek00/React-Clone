@@ -19,11 +19,9 @@ const FourthSection = () => {
       <Stack
         spacing={2}
         className={classes.root}
-        sx={{ px: { xs: 2, sm: 5, md: 10, lg: 25 } }}
       >
         <Box>
           <H2Typography text="Add interactivity" />
-          <br /> 
           <H2Typography text="wherever you need it" />
           <Typography className={MtFont.root} variant="h6" color="inherit">
             React components receive data and return what should appear on the

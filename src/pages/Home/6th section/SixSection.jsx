@@ -17,11 +17,10 @@ const SixSection = () => {
       <Stack
         spacing={2}
         className={classes.root}
-        sx={{ px: { xs: 2, sm: 5, md: 10, lg: 25 } }}
+        
       >
         <Box >
           <H2Typography text="Use the best from" />
-          <br />
           <H2Typography text="every platform" />
 
           <Typography

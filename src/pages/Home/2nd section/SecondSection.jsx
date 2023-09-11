@@ -2,7 +2,9 @@ import { Stack, Typography, Box, Button, ThemeProvider } from "@mui/material";
 import BgTypography from "../../../components/Text component/BgTypography";
 import { AllSections } from "../../page setup/PageSetupStyle";
 import { StyledSecondSection } from "../../../components/Style/AccessThemes";
-import H6Typography, { H6TypographyStyles } from "../../../components/Text component/Home section/H6Typography";
+import H6Typography, {
+  H6TypographyStyles,
+} from "../../../components/Text component/Home section/H6Typography";
 import H2Typography from "../../../components/Text component/Home section/H2Typography";
 
 const SecondSection = () => {
@@ -11,24 +13,15 @@ const SecondSection = () => {
 
   return (
     <StyledSecondSection>
-      <Stack
-        spacing={2}
-        className={classes.root}
-        sx={{ px: { xs: 2, sm: 5, md: 10, lg: 25 } }}
-      >
+      <Stack spacing={2} className={classes.root}>
         <Box>
           <H2Typography text=" Create user interfaces " />
-          <br />
           <H2Typography
             text=" 
             from components"
           />
 
-          <Typography
-            className={MtFont.root}
-            variant="h6"
-            color="inherit"
-          >
+          <Typography className={MtFont.root} variant="h6" color="inherit">
             React lets you build user interfaces out of individual pieces called
             components. Create your own React components like{" "}
             <BgTypography text="Thumbnail" /> ,{" "}
