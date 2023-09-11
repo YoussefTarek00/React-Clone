@@ -46,13 +46,13 @@ const PostDetails = ({ title, text, post }) => {
         <EightBlogSection />
       </Stack>
 
-      <ButtonBlogSection post={post} />
+      <ButtonBlogSection />
 
       <CustomDivider />
 
       <LastSection />
 
-      <CustomDivider/>
+      <CustomDivider />
     </>
   );
 };

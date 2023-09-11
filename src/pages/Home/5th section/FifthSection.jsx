@@ -3,14 +3,14 @@ import { StyledSection } from "../../../components/Style/AccessThemes";
 import WorkspacesIcon from "@mui/icons-material/Workspaces";
 import { useNavigate } from "react-router-dom";
 import CustomButton from "../../../components/Button component/CustomButton";
-import { useStyles } from "../../page setup/PageSetupStyle";
+import { AllSections } from "../../page setup/PageSetupStyle";
 import H6Typography, { H6TypographyStyles } from "../../../components/Text component/Home section/H6Typography";
 import H2Typography from "../../../components/Text component/Home section/H2Typography";
 
 const FifthSection = () => {
   const navigate = useNavigate();
   const theme = useTheme();
-  const classes = useStyles();
+  const classes = AllSections();
   const MtFont = H6TypographyStyles();
 
   return (

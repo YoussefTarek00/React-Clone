@@ -2,7 +2,7 @@ import { Box, Stack, Typography } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import CustomButton from "../../../components/Button component/CustomButton";
 import CodeOffIcon from "@mui/icons-material/CodeOff";
-import { useStyles } from "../../page setup/PageSetupStyle";
+import { AllSections } from "../../page setup/PageSetupStyle";
 import { StyledSecondSection } from "../../../components/Style/AccessThemes";
 import H6Typography, {
   H6TypographyStyles,
@@ -11,7 +11,7 @@ import H2Typography from "../../../components/Text component/Home section/H2Typo
 
 const FourthSection = () => {
   const navigate = useNavigate();
-  const classes = useStyles();
+  const classes = AllSections();
   const MtFont = H6TypographyStyles();
 
   return (

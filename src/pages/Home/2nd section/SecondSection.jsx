@@ -1,12 +1,12 @@
 import { Stack, Typography, Box, Button, ThemeProvider } from "@mui/material";
 import BgTypography from "../../../components/Text component/BgTypography";
-import { useStyles } from "../../page setup/PageSetupStyle";
+import { AllSections } from "../../page setup/PageSetupStyle";
 import { StyledSecondSection } from "../../../components/Style/AccessThemes";
 import H6Typography, { H6TypographyStyles } from "../../../components/Text component/Home section/H6Typography";
 import H2Typography from "../../../components/Text component/Home section/H2Typography";
 
 const SecondSection = () => {
-  const classes = useStyles();
+  const classes = AllSections();
   const MtFont = H6TypographyStyles();
 
   return (

@@ -10,12 +10,12 @@ import ReactLogo from "../../../../Images/logo192.png";
 import { useNavigate } from "react-router-dom";
 import { StyledSection } from "../../../components/Style/AccessThemes";
 import GetStartedButton from "../../../components/Button component/GetStartedButton";
-import { useStyles } from "../../page setup/PageSetupStyle";
+import { AllSections } from "../../page setup/PageSetupStyle";
 
 const Landing = () => {
   const navigate = useNavigate();
   const theme = useTheme();
-  const classes = useStyles();
+  const classes = AllSections();
 
   return (
     <StyledSection>

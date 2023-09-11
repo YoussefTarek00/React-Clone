@@ -6,11 +6,11 @@ import { useNavigate } from "react-router-dom";
 import ScienceIcon from "@mui/icons-material/Science";
 import CustomButton from "../../../components/Button component/CustomButton";
 import DevicesIcon from "@mui/icons-material/Devices";
-import { useStyles } from "../../page setup/PageSetupStyle";
+import { Section7Styles } from "../../page setup/PageSetupStyle";
 
 const SevenSection = () => {
   const navigate = useNavigate();
-  const classes = useStyles();
+  const classes = Section7Styles();
 
   return (
     <StyledSection sx={{ px: { xs: 2, sm: 5, md: 10 } }}>
