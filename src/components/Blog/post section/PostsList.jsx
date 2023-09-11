@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { fetchData } from "../../../components/RTK features/Slices/posts/postSlice";
+import { fetchData } from "../../../Services/posts/postSlice";
 import { Box, Grid, Link, Skeleton, Typography, useTheme } from "@mui/material";
 import PostsCards from "./PostsCards";
 import { StyledSection } from "../../../components/Style/AccessThemes";
