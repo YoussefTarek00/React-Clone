@@ -26,13 +26,13 @@ const SwiperSlider = () => {
     >
       <Swiper spaceBetween={50} slidesPerView={3}>
         {slides.map((slide) => (
-          <SwiperSlide key={slide.image}>
+          <SwiperSlide key={slide.src}>
             <Avatar
               src={slide.src}
               alt="swiper slider"
               sx={{
-                width: 355,
-                height: 241,
+                width: { xs: 150, sm: 200, md: 300, lg: 355 },
+                height: { xs: 120, sm: 200, md: 220, lg: 241 },
                 objectFit: "cover",
                 borderRadius: "1rem",
                 cursor: "pointer",

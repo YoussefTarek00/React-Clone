@@ -10,19 +10,18 @@ import ReactLogo from "../../../../Images/logo192.png";
 import { useNavigate } from "react-router-dom";
 import { StyledSection } from "../../../components/Style/AccessThemes";
 import GetStartedButton from "../../../components/Button component/GetStartedButton";
-import { AllSections } from "../../page setup/PageSetupStyle";
+import {  LandingSection } from "../../page setup/PageSetupStyle";
 
 const Landing = () => {
   const navigate = useNavigate();
   const theme = useTheme();
-  const classes = AllSections();
+  const classes = LandingSection();
 
   return (
     <StyledSection>
       <Stack
         spacing={2}
         className={classes.root}
-        sx={{ p: { xs: 2, sm: 5, md: 10, lg: 25 } }}
       >
         <Avatar
           src={ReactLogo}
